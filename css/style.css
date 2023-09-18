@@ -1,0 +1,1836 @@
+/* CSS Document */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  font-size: 12px;
+  font-family: Arial, Tahoma;
+  color: #000 !important;
+  overflow: hidden;
+}
+ul,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+dl,
+dd {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  font-size: 150%;
+  font-weight: normal;
+}
+h2 {
+  font-size: 130%;
+}
+h3 {
+  font-size: 120%;
+  font-weight: normal;
+}
+h4 {
+  font-size: 110%;
+}
+h5 {
+  font-size: 100%;
+  font-weight: normal;
+}
+ul {
+  list-style: none;
+}
+img {
+  border: 0px;
+}
+a {
+  color: #009cda;
+  outline: 0;
+}
+a:visited {
+  color: #0056b3;
+}
+a:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+textarea:focus,
+input:focus,
+select:focus {
+  outline: none;
+}
+/*button {
+  outline: none;
+  -webkit-appearance: none;
+
+}*/
+
+.button-search {
+  display: inline-block;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: 1px;
+  cursor: pointer;
+  background-color: #58bf3b;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+#container {
+  position: absolute;
+  bottom: 0px;
+  top: 51px;
+  background: #fff;
+  right: 4px;
+  left: 4px;
+}
+#sch {
+  position: absolute;
+  width: 340px;
+  top: 4px;
+  height: 32px;
+  left: 4px;
+  border: 1px solid #369;
+  background: #f8f8f8;
+  z-index: 1;
+}
+#sch #asset_list_item {
+  width: 93px;
+  margin: 4px 2px;
+}
+#sch #device {
+  position: absolute;
+  height: 20px;
+  width: 112px;
+  top: 4px;
+  left: 97px;
+  right: 86px;
+  line-height: 20px;
+  color: #000;
+  background: #fff;
+  border: 1px solid #778;
+  cursor: default;
+  font-weight: normal;
+  background: #fff url("../img/mapsearch.gif") no-repeat 4px center;
+  padding-left: 22px;
+}
+#sch #selone {
+  position: absolute;
+  width: 66px;
+  height: 23px;
+  top: 4px;
+  right: 34px;
+  text-align: center;
+  font-weight: normal;
+  cursor: pointer;
+  color: #000;
+}
+#sch #showobjchart {
+  position: absolute;
+  max-width: 30px;
+  height: 23px;
+  top: 4px;
+  right: 4px;
+  text-align: left;
+  cursor: pointer;
+}
+.dashboard {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  background: url("../img/dashboard.svg") no-repeat top left;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+}
+#mod {
+  position: absolute;
+  left: 4px;
+  width: 340px;
+  top: 42px;
+  bottom: 4px;
+  border: 1px solid #369;
+}
+.tablist {
+  position: absolute;
+  width: 340px;
+  bottom: 0px;
+  top: 35px;
+  margin: auto 0px;
+  overflow-y: scroll;
+}
+#tip {
+  display: none;
+  position: absolute;
+  left: 4px;
+  width: 340px;
+  height: 190px;
+  bottom: 4px;
+  border: 1px solid #369;
+}
+#tip #value {
+  position: absolute;
+  width: 283px;
+  top: 0;
+  bottom: 0;
+  word-break: normal;
+}
+#map {
+  position: absolute;
+  top: 4px;
+  left: 350px;
+  right: 0px;
+  bottom: 8px;
+  border: 1px solid #369;
+  z-index: 1;
+}
+#loadmapwait {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 120%;
+  color: #ff6;
+  font-weight: bold;
+  cursor: default;
+  background: #ccc url("../img/ajax-loader.gif") no-repeat 4px center;
+  padding: 1px 5px 1px 24px;
+  display: none;
+  z-index: 1001;
+}
+#geo {
+  display: none;
+  position: absolute;
+  top: 4px;
+  left: 350px;
+  right: 4px;
+  height: 18px;
+  z-index: 1;
+}
+#geo ul li {
+  float: left;
+  height: 18px;
+  line-height: 18px;
+}
+#geo #timeout {
+  width: 20px;
+  text-align: center;
+  color: #f00;
+  border: 1px solid #ccc;
+}
+#geo #dev_flag {
+  text-align: center;
+  color: #00f;
+  font-weight: bold;
+  padding: 2px 8px;
+}
+#geo #address {
+  text-align: left;
+  color: #000;
+  padding: 2px 8px;
+}
+.info_name {
+  padding-left: 20px;
+  background: transparent url("../img/info_name.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_position {
+  padding-left: 20px;
+  background: transparent url("../img/info_position.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_speed {
+  padding-left: 20px;
+  background: transparent url("../img/info_speed.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_angle {
+  padding-left: 20px;
+  background: transparent url("../img/info_angle.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_time {
+  padding-left: 20px;
+  background: transparent url("../img/info_time.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_engine {
+  padding-left: 20px;
+  background: transparent url("../img/info_engine.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_driver {
+  padding-left: 20px;
+  background: transparent url("../img/info_driver.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_address {
+  padding-left: 20px;
+  background: transparent url("../img/info_address.svg") no-repeat 2px 3px;
+  background-size: 14px 14px;
+}
+.info_io {
+  padding-left: 20px;
+  background: transparent url("../img/info_io.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_status {
+  padding-left: 20px;
+  background: transparent url("../img/status.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_fuel {
+  padding-left: 20px;
+  background: transparent url("../img/fuel_level.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_time {
+  padding-left: 20px;
+  background: transparent url("../img/info_time.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_odometer {
+  padding-left: 20px;
+  background: transparent url("../img/odometer2.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_engine {
+  padding-left: 20px;
+  background: transparent url("../img/info_engine.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_nearest_zone {
+  padding-left: 20px;
+  background: transparent url("../img/nearest_zone.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_pos_type {
+  padding-left: 20px;
+  background: transparent url("../img/marker.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_altitude {
+  padding-left: 20px;
+  background: transparent url("../img/altitude.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_max_speed {
+  padding-left: 20px;
+  background: transparent url("../img/info_speed.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_workid {
+  padding-left: 20px;
+  background: transparent url("../img/driver_rfid.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_driver_tel {
+  padding-left: 20px;
+  background: transparent url("../img/driver_phone.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_task {
+  padding-left: 20px;
+  background: transparent url("../img/task.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_cell {
+  padding-left: 20px;
+  background: transparent url("../img/cell.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_gps {
+  padding-left: 20px;
+  background: transparent url("../img/satellite.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_gsm {
+  padding-left: 20px;
+  background: transparent url("../img/gsmsignal.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_battery {
+  padding-left: 20px;
+  background: transparent url("../img/battery.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_mode {
+  padding-left: 20px;
+  background: transparent url("../img/mode.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_digital {
+  padding-left: 20px;
+  background: transparent url("../img/digital.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_power {
+  padding-left: 20px;
+  background: transparent url("../img/voltage_level.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_door {
+  padding-left: 20px;
+  background: transparent url("../img/info_door.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_maintenance {
+  padding-left: 20px;
+  background: transparent url("../img/maintenance.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_command {
+  padding-left: 20px;
+  background: transparent url("../img/command.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_moving {
+  padding-left: 20px;
+  background: transparent url("../img/moving.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_ad {
+  padding-left: 20px;
+  background: transparent url("../img/ad.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_passenger {
+  padding-left: 20px;
+  background: transparent url("../img/passenger.svg") no-repeat 2px center;
+  background-size: 16px 16px;
+}
+.info_io_humidity {
+  padding-left: 20px;
+  background: transparent url("../img/humidity.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_temp {
+  padding-left: 20px;
+  background: transparent url("../img/temper_level.svg") no-repeat 2px center;
+  background-size: 16px 16px;
+}
+.info_io_weight {
+  padding-left: 20px;
+  background: transparent url("../img/weight.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_alarm_name {
+  padding-left: 20px;
+  background: transparent url("../img/info_alarm_name.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_acc {
+  padding-left: 20px;
+  background: transparent url("../img/info_engine.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_tire {
+  padding-left: 20px;
+  background: transparent url("../img/tiresensor.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_route_length {
+  padding-left: 20px;
+  background: transparent url("../img/route_length.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_seat_belt {
+  padding-left: 20px;
+  background: transparent url("../img/seat_belt.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_moving_percent {
+  padding-left: 20px;
+  background: transparent url("../img/moving_percent.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_departure {
+  padding-left: 20px;
+  background: transparent url("../img/departure.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_dist_to_leader {
+  padding-left: 20px;
+  background: transparent url("../img/distance.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_time_to_leader {
+  padding-left: 20px;
+  background: transparent url("../img/time_gap.svg") no-repeat 2px center;
+  background-size: 20px 20px;
+}
+.info_io_delivery {
+  padding-left: 20px;
+  background: transparent url("../img/delivery.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_sleep_mode {
+  padding-left: 20px;
+  background: transparent url("../img/sleep_mode.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_io_gnns_status {
+  padding-left: 20px;
+  background: transparent url("../img/gnns_status.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_status {
+  padding-left: 20px;
+  background: #f5f5f5 url("../img/info_status.svg") no-repeat 2px center;
+  background-size: 16px 16px;
+}
+.info_scmd {
+  padding-left: 20px;
+  background: #f5f5f5 url("../img/info_cmd.svg") no-repeat 2px center;
+  background-size: 15px 15px;
+}
+.info_levent {
+  padding-left: 20px;
+  background: #f5f5f5 url("../img/info_alarm.svg") no-repeat 2px center;
+  background-size: 16px 16px;
+}
+.info_lmileage {
+  padding-left: 20px;
+  background: #f5f5f5 url("../img/info_mileage.svg") no-repeat 2px center;
+  background-size: 16px 16px;
+}
+.info_lengine {
+  padding-left: 20px;
+  background: #f5f5f5 url("../img/info_last_engine.svg") no-repeat 2px center;
+  background-size: 16px 16px;
+}
+.info_lload {
+  padding-left: 20px;
+  background: #f5f5f5 url("../img/info_load.svg") no-repeat 2px center;
+  background-size: 16px 16px;
+}
+.info_lspeed {
+  padding-left: 20px;
+  background: #f5f5f5 url("../img/info_speedometer.svg") no-repeat 2px center;
+  background-size: 18px 18px;
+}
+.info_tiresensor {
+  padding-left: 20px;
+  background: #f5f5f5 url("../img/info_tiresensor.svg") no-repeat 2px center;
+  background-size: 16px 16px;
+}
+.info_ldriver {
+  padding-left: 20px;
+  background: #f5f5f5 url("../img/info_last_driver.svg") no-repeat 2px center;
+  background-size: 16px 16px;
+}
+.info_lphoto {
+  padding-left: 20px;
+  background: #f5f5f5 url("../img/info_gallery.svg") no-repeat 2px center;
+  background-size: 16px 16px;
+}
+.info_lmaintain {
+  padding-left: 20px;
+  background: #f5f5f5 url("../img/info_maintenance.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_ltask {
+  padding-left: 20px;
+  background: #f5f5f5 url("../img/info_task.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.info_warning {
+  padding-left: 20px;
+  background: transparent url("../img/info_warning.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.task_new {
+  padding-left: 20px;
+  background: transparent url("../img/task_new.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.task_in_progress {
+  padding-left: 20px;
+  background: transparent url("../img/task_in_progress.svg") no-repeat 2px
+    center;
+  background-size: 14px 14px;
+}
+.task_finish {
+  padding-left: 20px;
+  background: transparent url("../img/task_finish.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.task_fail {
+  padding-left: 20px;
+  background: transparent url("../img/task_fail.svg") no-repeat 2px center;
+  background-size: 14px 14px;
+}
+.oneline {
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.query_waiting {
+  padding-left: 20px;
+  background: transparent url("../img/loading.svg") no-repeat 0px center;
+  background-size: 16px 16px;
+}
+.driver_name {
+  line-height: 20px;
+  padding-left: 18px;
+  background: url("../img/driver_name.svg") no-repeat 0px;
+  background-size: 14px 14px;
+}
+.driver_phone {
+  line-height: 20px;
+  padding-left: 18px;
+  background: url("../img/driver_phone.svg") no-repeat 0px;
+  background-size: 14px 14px;
+}
+.driver_rfid {
+  line-height: 20px;
+  padding-left: 18px;
+  background: url("../img/driver_rfid.svg") no-repeat 0px;
+  background-size: 16px 16px;
+}
+.operate_add {
+  padding-left: 20px;
+  background: transparent url("../img/operate_add.svg") no-repeat 2px center;
+  background-size: 16px 16px;
+}
+.operate_view {
+  padding-left: 20px;
+  background: transparent url("../img/operate_view.svg") no-repeat 0px center;
+  background-size: 18px 18px;
+}
+.operate_edit {
+  padding-left: 20px;
+  background: transparent url("../img/operate_edit.svg") no-repeat 0px center;
+  background-size: 18px 18px;
+}
+.operate_service {
+  padding-left: 20px;
+  background: transparent url("../img/operate_service.svg") no-repeat 0px center;
+  background-size: 18px 18px;
+}
+.operate_delete {
+  padding-left: 15px;
+  background: transparent url("../img/operate_delete.svg") no-repeat 0px center;
+  background-size: 18px 18px;
+}
+.operate_login_as_user {
+  padding-left: 20px;
+  background: transparent url("../img/operate_login_as_user.svg") no-repeat 0px
+    center;
+  background-size: 14px 14px;
+}
+.operate_erase {
+  padding-left: 20px;
+  background: transparent url("../img/operate_erase.svg") no-repeat 0px center;
+  background-size: 16px 16px;
+}
+.operate_search {
+  padding-left: 20px;
+  background: transparent url("../img/operate_search.svg") no-repeat 0px center;
+  background-size: 18px 18px;
+}
+.state_enable {
+  padding-left: 20px;
+  background: transparent url("../img/tick-green.svg") no-repeat 0px center;
+  background-size: 12px 12px;
+}
+.state_disable {
+  padding-left: 20px;
+  background: transparent url("../img/remove-red.svg") no-repeat 0px center;
+  background-size: 12px 12px;
+}
+.route_start {
+  padding-left: 20px;
+  background: transparent url("../img/route-start.svg") no-repeat 0px center;
+  background-size: 14px 14px;
+}
+.route_drive {
+  padding-left: 20px;
+  background: transparent url("../img/route-drive.svg") no-repeat 0px center;
+  background-size: 14px 14px;
+}
+.route_stop {
+  padding-left: 20px;
+  background: transparent url("../img/route-stop.svg") no-repeat 0px center;
+  background-size: 14px 14px;
+}
+.route_event {
+  padding-left: 20px;
+  background: transparent url("../img/route-event.svg") no-repeat 0px center;
+  background-size: 14px 14px;
+}
+.route_end {
+  padding-left: 20px;
+  background: transparent url("../img/route-end.svg") no-repeat 0px center;
+  background-size: 14px 14px;
+}
+#stasep {
+  position: absolute;
+  left: 350px;
+  right: 4px;
+  height: 4px;
+  bottom: 4px;
+  background: #f8f8f8;
+  color: #000;
+  border: none;
+  text-align: center;
+}
+#staswitch {
+  margin: 0 auto;
+  height: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+#assetinfo {
+  display: none;
+  position: absolute;
+  height: 152px;
+  left: 350px;
+  right: 0px;
+  bottom: 4px;
+  border: 1px solid #369;
+  z-index: 1;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+/*解决#assetinfo不显示滚动条*/
+:root {
+  --scrollbar-track-color: transparent;
+  --scrollbar-color: rgba(0, 0, 0, 0.2);
+  --scrollbar-size: 0.975rem;
+  --scrollbar-minlength: 3rem; /* Minimum length of scrollbar thumb (width of horizontal, height of vertical) */
+}
+#assetinfo::-webkit-scrollbar {
+  height: var(--scrollbar-size);
+  width: var(--scrollbar-size);
+}
+#assetinfo::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-color);
+}
+#assetinfo::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color); /* Add :hover, :active as needed */
+}
+#assetinfo::-webkit-scrollbar-thumb:vertical {
+  min-height: var(--scrollbar-minlength);
+}
+#assetinfo::-webkit-scrollbar-thumb:horizontal {
+  min-width: var(--scrollbar-minlength);
+}
+/*解决#assetinfo不显示滚动条*/
+#footer {
+  display: none;
+  position: absolute;
+  height: 25px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  background: #369;
+  line-height: 25px;
+  border-top: 1px solid #999;
+  padding-right: 14px;
+  padding-left: 14px;
+}
+#streetview_img {
+  position: absolute;
+  border: 2px solid #eff7f7;
+  bottom: 10px;
+  right: 5px;
+  z-index: 1000;
+  width: 308px;
+  height: 170px;
+  background: white;
+  filter: alpha(Opacity=80);
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+}
+#live_video {
+  position: absolute;
+  border: 2px solid #eff7f7;
+  bottom: 10px;
+  right: 5px;
+  z-index: 1000;
+  width: 400px;
+  height: 300px;
+  background: white;
+  filter: alpha(Opacity=80);
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+}
+#race_info {
+  position: absolute;
+  overflow-y: scroll;
+  border: 2px solid #eff7f7;
+  bottom: 23px;
+  right: 5px;
+  z-index: 1000;
+  width: 800px;
+  height: 100px;
+  background: white;
+  filter: alpha(Opacity=80);
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+}
+#mapsearchbar {
+  position: absolute;
+  left: 40px;
+  bottom: 10px;
+  width: 230px;
+  height: 24px;
+  background: #fff;
+  border: 1px solid #369;
+  z-index: 1000;
+}
+#mapsearchtext {
+  position: absolute;
+  left: 1px;
+  bottom: 1px;
+  height: 18px;
+  width: 202px;
+  border: 1px solid #999;
+  background: #fff url("../img/mapsearch.gif") no-repeat 4px center;
+  padding-left: 22px;
+}
+.icon_info {
+  background: transparent url("../img/icon_info.png") no-repeat 16px center;
+}
+.icon_warning {
+  background: transparent url("../img/icon_warning.png") no-repeat 16px center;
+}
+.icon_succ {
+  background: transparent url("../img/icon_succ.png") no-repeat 16px center;
+}
+.icon_stop {
+  background: transparent url("../img/icon_stop.png") no-repeat 16px;
+}
+.tooltip {
+  position: absolute;
+  padding: 5px;
+  border: 1px solid gray;
+  font-size: 9pt;
+  font-family: Arial, Tahoma;
+  background-color: #fff;
+  z-index: 30;
+}
+/*header*/
+#header {
+  position: absolute;
+  height: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+#header h1 {
+  width: 126px;
+  float: left;
+  padding: 5px 0px;
+}
+#nav {
+  float: left;
+  height: 30px;
+  overflow: hidden;
+  margin:10px 50px;
+}
+#nav ul li {
+  float: left;
+  height: 30px;
+}
+#nav ul li a {
+  display: block;
+  line-height: 30px;
+  padding: 0 15px;
+  color: grey;
+  font-size: 120%;
+  text-decoration: none;
+}
+#nav ul li a:hover {
+  text-decoration: none;
+  color: #339949;
+  border-radius: 5px;
+}
+#nav ul li a#nav_current {
+  font-weight: bold;
+  background: #6a7c6e;
+  color: #fff;
+  border-radius: 5px;
+}
+/*user*/
+#useinfo {
+  position: absolute;
+  right: 5px;
+  height: 22px;
+  overflow: hidden;
+  margin: 10px;
+  background-color: #97b918;
+  border-radius: 8px;
+  padding: 5px 5px 5px 5px;
+  border: 1px solid #26559d;
+}
+#useinfo ul li {
+  float: left;
+  height: 22px;
+}
+#useinfo ul li a {
+  display: block;
+  line-height: 22px;
+  color: #fff;
+  font-size: 95%;
+  padding: 0 5px;
+  text-decoration: none;
+}
+#useinfo ul li a:hover {
+  background: #132e00;
+  color: #fff;
+  text-decoration: none;
+}
+#useinfo ul li#user {
+  padding-left: 16px;
+  background: url("../img/User.svg") no-repeat 2px;
+  background-size: 18px 18px;
+}
+#useinfo ul li#share {
+  padding-left: 16px;
+  background: url("../img/share_position.svg") no-repeat 2px;
+  background-size: 18px 18px;
+}
+#useinfo ul li#alarm_msg {
+  padding-left: 16px;
+  background: url("../img/alarm_off.svg") no-repeat 2px;
+  background-size: 16px 16px;
+}
+#useinfo ul li#mobile_version {
+  padding-left: 16px;
+  background: url("../img/mobile.svg") no-repeat 2px;
+  background-size: 18px 18px;
+}
+#useinfo ul li#user_exit {
+  padding-left: 16px;
+  background: url("../img/icon_exit.svg") no-repeat 2px;
+  background-size: 17px 17px;
+}
+#useinfo ul li#user_return {
+  padding-left: 16px;
+  background: url("../img/icon_return.svg") no-repeat 2px;
+  background-size: 20px 20px;
+}
+#frm {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+  bottom: 4px;
+  visibility: hidden;
+}
+/*tabbar*/
+/*ul.tabbar {
+  margin: 2px 0px;
+  padding: 3px;
+  border-bottom: 1px solid #dddddd;
+  white-space: nowrap;
+  display: flex !important;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+ul.tabbar li {
+  list-style: none;
+  margin: 0;
+  display: inline;
+}
+ul.tabbar li a {
+  padding: 2px 2px 3px 2px;
+  margin-left: 1px;
+  height: 22px;
+  font-weight: normal;
+  border: 1px solid #778;
+  border-bottom: none;
+  background: #ededeb;
+  color: #494949;
+  text-decoration: none;
+}
+ul.tabbar li a:link {
+  color: #448;
+}
+ul.tabbar li a:hover {
+  color: #fff;
+  background: #0275ff;
+  border-color: #0275ff;
+}
+ul.tabbar li.tab_active a {
+  color: #0275ff;
+  background: white;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #0275ff;
+  border-right: 1px solid #0275ff;
+  border-top: 2px solid #0275ff;
+}*/
+
+/*newtabbar*/
+.tabbar {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tabbar li {
+  flex: 1;
+  text-align: center;
+}
+
+.tabbar a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  background-color: #fff; /* Adjust the background color as needed */
+}
+
+/* Add styles for the active tab */
+.tabbar .tab_active a {
+  background-color: #5bc872; /* Adjust the active tab background color */
+  color: #fff; /* Adjust the active tab text color */
+}
+
+
+/*menu*/
+.mnuOperat {
+  position: absolute;
+  z-index: 1001;
+}
+.mnuOperat ul {
+  width: 180px;
+  height: auto;
+  position: absolute;
+  list-style: none;
+}
+.mnuOperat ul li {
+  width: 180px;
+  padding: 2px;
+  background: #f6f6f6;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  line-height: 20px;
+  font-size: 100%;
+  position: relative;
+}
+.mnuOperat ul li a {
+  color: #000;
+  text-decoration: none;
+}
+.mnuOperat ul li:hover {
+  background: #dddddd;
+  cursor: pointer;
+}
+.mnuOperat ul.mnuHistory {
+  left: 184px;
+  top: 0px;
+  display: none;
+}
+.mnuOperat .liHistory:hover ul.mnuHistory {
+  display: block;
+}
+#trackby a {
+  padding-left: 25px;
+  background: transparent url("../img/monitor.svg") no-repeat 4px center;
+  background-size: 14px 14px;
+}
+#objinfo a {
+  padding-left: 25px;
+  background: transparent url("../img/objinfo.svg") no-repeat 4px center;
+  background-size: 14px 14px;
+}
+#sendcmd a {
+  padding-left: 25px;
+  background: transparent url("../img/sendcmd.svg") no-repeat 4px center;
+  background-size: 14px 14px;
+}
+.liHistory .aHistory {
+  padding-left: 25px;
+  background: transparent url("../img/clock.svg") no-repeat 4px center;
+  background-size: 14px 14px;
+}
+.liHistory .iHistory {
+  background: url("../img/right_arrow.svg") no-repeat 4px center;
+  padding-left: 23px;
+  background-size: 10px 10px;
+}
+.liHistory img {
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  height: 10px;
+  width: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+#streetview a {
+  padding-left: 25px;
+  background: transparent url("../img/tool_streetview.svg") no-repeat 4px center;
+  background-size: 14px 14px;
+}
+#shareposition a {
+  padding-left: 25px;
+  background: transparent url("../img/share_position.svg") no-repeat 4px center;
+  background-size: 14px 14px;
+}
+/*device tips*/
+#devicetips {
+  position: absolute;
+  z-index: 1;
+  background-color: #404a42;
+  padding: 4px;
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  opacity: 0.8;
+  border-radius: 2px;
+}
+#devicetips table td {
+  padding: 1px 5px 1px 1px;
+}
+
+/*tree grid*/
+.tree_table {
+  margin: 0;
+  font-size: 100%;
+  line-height: 20px;
+  text-align: left;
+  overflow: hidden;
+  width: 100%;
+  border-collapse: collapse;
+}
+.tree_table tr:not(.end_state) {
+  cursor: default;
+  height: 25px;
+  border-top: 1px solid #dddddd;
+}
+.tree_table tr.end_state {
+  border-bottom: 1px solid #dddddd;
+}
+.tree_table tr.end_state li {
+  display: block;
+  float: left;
+  font-size: 12px;
+  color: #808080;
+}
+.tree_table th .tree_table td {
+  text-align: left;
+}
+.tree_table .group {
+  font-weight: bold;
+  border-top: 1px solid #dddddd;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.tree_table .showall {
+  opacity: 0.5;
+  outline: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  background: url("../img/show.svg") no-repeat 0px center;
+  background-size: 14px 14px;
+}
+.tree_table .trackall {
+  opacity: 0.5;
+  outline: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  background: url("../img/track.svg") no-repeat 0px center;
+  background-size: 14px 14px;
+}
+.tree_table .close {
+  background: #fff url("../img/plus.svg") no-repeat 4px center;
+  padding-left: 23px;
+  background-size: 10px 10px;
+}
+.tree_table .open {
+  background: #fff url("../img/minus.svg") no-repeat 4px center;
+  padding-left: 23px;
+  background-size: 10px 10px;
+}
+.tree_table .parking {
+  width: 20%;
+  background: url("../img/parking.svg") no-repeat right 2px center;
+  background-size: 14px 14px;
+}
+.tree_table .engine_on {
+  width: 20%;
+  background: url("../img/engine_on.svg") no-repeat right 2px center;
+  padding-right: 17px;
+  background-size: 14px 14px;
+}
+.tree_table .engine_off {
+  width: 20%;
+  background: url("../img/engine_off.svg") no-repeat right 2px center;
+  padding-right: 17px;
+  background-size: 14px 14px;
+}
+.tree_table .menu {
+  background: url("../img/menu.svg") no-repeat 2px center;
+  padding-left: 8px;
+  cursor: pointer;
+  background-size: 4px 16px;
+}
+.tree_table .online {
+  background: url("../img/object_online.svg") no-repeat 0px center;
+  padding-left: 12px;
+  background-size: 14px 14px;
+}
+.tree_table .offline {
+  background: url("../img/object_offline.svg") no-repeat 0px center;
+  padding-left: 12px;
+  background-size: 14px 14px;
+}
+.tree_table .gpsvalid {
+  background: url("../img/gps_valid.svg") no-repeat 0px center;
+  padding-left: 12px;
+  background-size: 13px 13px;
+}
+.tree_table .cellvalid {
+  background: url("../img/cell_valid.svg") no-repeat 0px center;
+  padding-left: 12px;
+  background-size: 14px 14px;
+}
+.tree_table .invalid {
+  background: url("../img/invalid.svg") no-repeat 0px center;
+  padding-left: 12px;
+  background-size: 14px 14px;
+}
+.tree_table .alarm {
+  background: url("../img/alarm.svg") no-repeat 0px center;
+  padding-left: 12px;
+  cursor: pointer;
+  background-size: 13px 14px;
+}
+.tree_table .tasknew {
+  background: url("../img/tasknew.svg") no-repeat 0px center;
+  padding-left: 14px;
+  cursor: pointer;
+  background-size: 14px 14px;
+}
+.tree_table .taskprocessing {
+  background: url("../img/taskprocessing.svg") no-repeat 0px center;
+  padding-left: 14px;
+  cursor: pointer;
+  background-size: 14px 14px;
+}
+.tree_table tr.normal {
+  color: #000;
+}
+.tree_table tr.active {
+  background-color: #dddddd;
+  padding: 0 2px;
+  font-weight: normal;
+}
+.tree_table tr.gractive {
+  color: #0275ff;
+}
+.tree_table tr.hover {
+  background-color: #dddddd;
+  padding: 0 2px;
+  font-weight: normal;
+}
+.tree_table .end_state td ul {
+  float: left;
+  list-style: none;
+}
+.tree_table .end_state td ul li {
+  display: inline;
+  float: left;
+}
+.tree_table .end_state .temp_1 {
+  transform: scale(0.95);
+  background: url("../img/state_temp.svg") no-repeat 0px center;
+  padding-left: 14px;
+  background-size: 13px 13px;
+}
+.tree_table .end_state .fuel_1 {
+  transform: scale(0.95);
+  background: url("../img/state_fuel.svg") no-repeat 0px center;
+  padding-left: 14px;
+  background-size: 13px 13px;
+}
+.tree_table .end_state .mil_24 {
+  transform: scale(0.95);
+  background: url("../img/state_route.svg") no-repeat 0px center;
+  padding-left: 14px;
+  background-size: 13px 13px;
+}
+.tree_table .end_state .max_speed_24 {
+  transform: scale(0.95);
+  background: url("../img/state_max_speed.svg") no-repeat 0px center;
+  padding-left: 14px;
+  background-size: 13px 13px;
+}
+.tree_table .end_state .moving_time_24 {
+  transform: scale(0.95);
+  background: url("../img/moving_time_24.svg") no-repeat 0px center;
+  padding-left: 14px;
+  background-size: 15px 15px;
+}
+.tree_table .end_state .idle_time_24 {
+  transform: scale(0.95);
+  background: url("../img/idle_time_24.svg") no-repeat 0px center;
+  padding-left: 14px;
+  background-size: 15px 15px;
+}
+.tree_table .end_state .stop_time_24 {
+  transform: scale(0.95);
+  background: url("../img/stop_time_24.svg") no-repeat 0px center;
+  padding-left: 14px;
+  background-size: 15px 15px;
+}
+.tree_table .end_state .engine_time_24 {
+  transform: scale(0.95);
+  background: url("../img/engine_time_24.svg") no-repeat 0px center;
+  padding-left: 14px;
+  background-size: 15px 15px;
+}
+.tree_table .end_state .total_mil {
+  transform: scale(0.95);
+  background: url("../img/odometer2.svg") no-repeat 0px center;
+  padding-left: 14px;
+  background-size: 13px 13px;
+}
+.tree_table .end_state .last_driver {
+  transform: scale(0.95);
+  background: url("../img/steering_wheel_green.svg") no-repeat 0px center;
+  padding-left: 14px;
+  background-size: 13px 13px;
+}
+.tree_table .end_state .door_state {
+  transform: scale(0.95);
+  background: url("../img/info_door.svg") no-repeat 0px center;
+  padding-left: 14px;
+  background-size: 13px 13px;
+}
+
+/*dialog*/
+/*.button { margin: 2px; padding: 2px 15px; height: 24px; font-size: 100%; text-align: center; font-weight: normal; }
+
+
+.enable { cursor: pointer; margin-top: 2px; padding: 2px 12px; }
+/*.enable:hover { color: #f00; text-decoration: underline; }
+.disable { color: #999; cursor: default;  margin-top: 2px; padding: 2px 12px; background: #ccc; border: 1px solid #999; }*/
+#dlg_loading #tips {
+  display: block;
+  padding: 20px 10px 20px 80px;
+  line-height: 20px;
+  background: #fff url("../img/loading.svg") no-repeat 40px;
+  background-size: 32px 32px;
+  z-index: 1015;
+}
+.modalmask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  background: #999;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  z-index: 1001;
+}
+.modalmask_level2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  background: #999;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  z-index: 1011;
+}
+.modalmask_level3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  background: #999;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  z-index: 1013;
+}
+.dialog {
+  position: absolute;
+  display: none;
+  font-size: 100%;
+  z-index: 1010;
+}
+.dialog .out {
+  background: #999;
+  margin: 5px 0px 0px 5px;
+}
+.dialog .in {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  position: relative;
+  top: -2px;
+  left: -2px;
+  margin: 0 auto;
+}
+.dialog h3 {
+  background-color: #36c;
+  color: #fff;
+  font-size: 110%;
+  line-height: 30px;
+  padding: 0 4px;
+  cursor: move;
+}
+.dialog_cancel {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: transparent url("../img/wndclose.png") no-repeat 0 center;
+  cursor: pointer;
+}
+.speedchart_min {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: transparent url("../img/iw_min.gif") no-repeat 0 center;
+  cursor: pointer;
+}
+.speedchart_max {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: transparent url("../img/iw_max.gif") no-repeat 0 center;
+  cursor: pointer;
+}
+.dialog .content {
+  margin: 2px 8px;
+  border: 1px dashed #e7e7e7;
+  overflow: auto;
+}
+.dialog td {
+  height: 25px;
+  padding: 2px;
+}
+.dialog .footer {
+  background: #f6f6f6;
+  border-top: 1px solid #999;
+  height: 30px;
+  margin: 2px 4px;
+  padding-top: 4px;
+}
+.dialog .right {
+  float: right;
+}
+.dialog .delete {
+  width: 32px;
+  height: 18px;
+  background: transparent url("../img/delete.png") no-repeat center;
+  color: #000;
+  cursor: pointer;
+  border: 1px solid #369;
+}
+.dialog p {
+  margin: 0;
+  padding: 4px 8px;
+  line-height: 16px;
+  background: #e1e1e1;
+  color: #369;
+  border-bottom: 1px solid #999;
+}
+.dialog ul:not(.tab) {
+  padding: 1px;
+  cursor: default;
+}
+.dialog ul li:not(.tab) {
+  line-height: 20px;
+  border-bottom: 1px dashed #e7e7e7;
+  text-align: left;
+}
+.dialog ul#cmdul li {
+  width: 350px;
+}
+.dialog ul#altul li {
+  width: 395px;
+}
+#dlg_sendcmd ul li a:not(.tab) {
+  margin: 1px;
+  padding: 2px 22px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  background: url("../img/cmditem.svg") no-repeat 3px center;
+  background-size: 14px 14px;
+}
+.dialog ul li a:hover {
+  text-decoration: none;
+}
+#dlg_sendcmd ul li.dlg_active a {
+  font-weight: bold;
+  color: #000;
+  background: #dddddd url("../img/sendcmd.svg") no-repeat 3px center;
+  background-size: 14px 14px;
+}
+
+.infowindow {
+  line-height: 1.35;
+  font-size: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 300px;
+  max-height: 260px;
+}
+.infowindow h3 {
+  line-height: 16px;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #000;
+}
+.infowindow ul {
+  line-height: 18px;
+  font-size: 95%;
+}
+.infowindow table {
+  color: #000;
+  font-weight: normal;
+}
+.infowindow ul li {
+  color: #000;
+  margin: 0 0px 6px 0px;
+}
+.infowindow ul li span {
+  color: #000;
+  font-weight: normal;
+}
+.infowindow ul li .button {
+  padding: 2px;
+  margin: 2px;
+  width: 20px;
+  height: 16px;
+  float: left;
+  border: 1px solid #ccc;
+}
+.infowindow ul li .button:hover {
+  border: 1px solid #000;
+}
+.infowindow ul li .trackby {
+  background: transparent url("../img/monitor.svg") no-repeat 4px center;
+  background-size: 16px 16px;
+}
+.infowindow ul li .objinfo {
+  background: transparent url("../img/objinfo.svg") no-repeat 4px center;
+  background-size: 16px 16px;
+}
+.infowindow ul li .sendcmd {
+  background: transparent url("../img/sendcmd.svg") no-repeat 4px center;
+  background-size: 16px 16px;
+}
+.infowindow ul li .lastpic {
+  background: transparent url("../img/last_photo.svg") no-repeat 4px center;
+  background-size: 16px 16px;
+}
+.infowindow ul li .lastvoice {
+  background: transparent url("../img/record.svg") no-repeat 4px center;
+  background-size: 16px 16px;
+}
+.infowindow ul li .shareposition {
+  background: transparent url("../img/share_position.svg") no-repeat 4px center;
+  background-size: 16px 16px;
+}
+.infowindow ul li .altifno {
+  background: transparent url("../img/alarm.svg") no-repeat 4px center;
+  background-size: 16px 16px;
+}
+.infowindow ul li.infospeed {
+  padding-left: 18px;
+  background: url("../img/parking.svg") no-repeat 0px;
+  background-size: 18px 18px;
+}
+.infowindow ul li.infoltime {
+  padding-left: 18px;
+  background: url("../img/clock.svg") no-repeat 0px;
+  background-size: 18px 18px;
+}
+.infowindow ul li.odometer {
+  padding-left: 18px;
+  background: url("../img/odometer2.svg") no-repeat 0px;
+  background-size: 18px 18px;
+}
+.infowindow ul li.infolocal {
+  padding-left: 18px;
+  background: url("../img/compass.svg") no-repeat 0px;
+  background-size: 18px 18px;
+}
+.infowindow ul li span.infogps {
+  padding-left: 18px;
+  background: url("../img/satellite.svg") no-repeat 0px;
+  background-size: 16px 16px;
+  display: inline-block;
+}
+.infowindow ul li span.infogsm {
+  padding-left: 18px;
+  background: url("../img/gsmsignal.svg") no-repeat 0px;
+  background-size: 16px 16px;
+  display: inline-block;
+}
+.infowindow ul li span.infopassenger {
+  padding-left: 18px;
+  background: url("../img/passenger.svg") no-repeat 0px;
+  background-size: 18px 18px;
+  display: inline-block;
+}
+.infowindow .infodriver {
+  float: left;
+  margin: 0px 10px 5px 0px;
+  width: 80px;
+  height: 155px;
+  overflow: hidden;
+}
+.infowindow .infodriver ul {
+  color: #000;
+  text-align: center;
+}
+.infowindow .infodriver ul li {
+  display: block;
+  float: left;
+  width: 80px;
+  margin-right: 8px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+.infowindow .infobase {
+  float: left;
+  margin: 0px 0px 5px 0px;
+}
+.infowindow .infobottom {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  height: 25px;
+  width: 100%;
+}
+.infowindow .infobottom ul {
+  text-align: left;
+  list-style: none;
+}
+.infowindow .infobottom ul li {
+  display: inline;
+  line-height: 25px;
+  float: left;
+  margin: 0px 3px 0px 0px;
+}
+.infowindow .infobottom ul li.infoacc {
+  width: 17%;
+  padding-left: 16px;
+  background: url("../img/engine_off.svg") no-repeat 0px;
+  background-size: 18px 18px;
+}
+.infowindow .infobottom ul li.infofuel {
+  width: 15%;
+  padding-left: 16px;
+  background: url("../img/fuel_level.svg") no-repeat 0px;
+  background-size: 18px 18px;
+}
+.infowindow .infobottom ul li.infotemp {
+  width: 17%;
+  padding-left: 16px;
+  background: url("../img/temper_level.svg") no-repeat 0px;
+  background-size: 20px 20px;
+}
+.infowindow .infobottom ul li.infovolt {
+  width: 10%;
+  padding-left: 16px;
+  background: url("../img/voltage_level.svg") no-repeat 0px;
+  background-size: 20px 20px;
+}
+.infowindow .infobottom ul li.infoweight {
+  width: 10%;
+  padding-left: 16px;
+  background: url("../img/weight.svg") no-repeat 0px;
+  background-size: 20px 20px;
+}
+
+/*map legend*/
+#legdiv {
+  position: absolute;
+  right: 0px;
+  bottom: 10px;
+  width: 250px;
+  height: 15px;
+  z-index: 1000;
+}
+/*map tools*/
+#maptools {
+  position: absolute;
+  left: 360px;
+  top: 110px;
+  width: 30px;
+  height: 250px;
+  z-index: 1;
+}
+#maptools table {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  border-collapse: collapse;
+}
+#maptools table td {
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid #dedfde;
+  border-collapse: collapse;
+  cursor: pointer;
+}
+.popup_driver {
+  background: url("../img/steering_wheel_green.svg") no-repeat 0px center;
+  padding-left: 18px;
+  background-size: 16px 16px;
+}
+
+.labels {
+  color: white;
+  background-color: green;
+  border-radius: 3px;
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  font-size: 100%;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  padding: 0px 1px;
+  white-space: nowrap;
+  border: 2px solid #696969;
+}
+.labelsgeo {
+  color: black;
+  background-color: #fdfefd;
+  border-radius: 3px;
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  font-size: 100%;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  padding: 2px 2px;
+  white-space: nowrap;
+}
+
+.cmdcheckbox {
+  display: none;
+}
+.cmdswitch {
+  width: 36px;
+  height: 15px;
+  background: #ccc;
+  border-radius: 8px;
+  padding: 1px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.cmdswitch:after {
+  content: "";
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.15), 0 1px 1px 0 rgba(0, 0, 0, 0.16),
+    0 3px 1px 0 rgba(0, 0, 0, 0.1);
+  width: 13px;
+  height: 13px;
+  background: #fff;
+  border-radius: 50%;
+  display: block;
+  margin-left: 1px;
+  float: left;
+  transition: all 0.5s;
+}
+.cmdcheckbox:checked + .cmdswitch:after {
+  margin-left: 20px;
+}
+.cmdcheckbox:checked + .cmdswitch {
+  background: #56acfe;
+}
+ul.share_serach li {
+  float: left;
+  list-style: none;
+  text-decoration: none;
+  padding: 0px 2px 0px 0px;
+}
+ul.share_serach li label {
+  margin: auto 4px;
+}
+.share_position_area {
+  position: absolute;
+  margin: 0;
+  border: 1px solid #999;
+  overflow-y: scroll;
+  left: 12px;
+  top: 65px;
+  right: 12px;
+  bottom: 42px;
+}
+#dlg_shareposition_properties td {
+  white-space: nowrap;
+}
+
+/*.highcharts-container {
+  position: inherit !important;
+}
+.highcharts-tooltip {
+  z-index: 19998;
+}*/
+
+.highcharts-tooltip-box {
+  visibility: inherit !important;
+}
+
+.highcharts-container,
+svg:not(:root),
+.chart-container {
+  overflow: visible !important;
+  z-index: 9999 !important;
+}
+
+/*.highcharts-container { overflow: visible !important; }
+.highcharts-container svg {
+    overflow: visible !important;
+}*/

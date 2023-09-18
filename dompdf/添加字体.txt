@@ -1,0 +1,2 @@
+cd /d D:\ANB Platfrom\www-anb test\dompdf
+php load_font.php simpo simpo.ttf

@@ -1,0 +1,12 @@
+@charset "utf-8";
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; font-size: small; font-family: Arial, Tahoma; overflow: auto; background: #fff; }
+#search_bar { width: 100%; height: 32px; border-bottom: 1px solid #666; z-index: 1; }
+#search_bar ul { padding: 0; margin: 0; }
+#search_bar ul li { float: left; list-style: none; line-height: 20px; text-decoration:none; padding: 4px; }
+#search_bar input.text { padding:0; width: 140px; line-height: 20px; height: 20px; border: 1px solid #369; font-size: 100%; background: #fff url(../img/date.png) no-repeat right center; }
+#search_bar input.time { padding:0; width: 140px; line-height: 20px; height: 20px; border: 1px solid #369; font-size: 100%; }
+#search_bar input.disable { padding:0; width: 140px; line-height: 20px; height: 20px; border: 1px solid #999; background: #ccc; color: #333; }
+#search_bar .button {width: 55px; height: 22px; text-align: center; line-height: 20px; }
+#search_bar .btnenable { font-weight: bold; color: #000; cursor: pointer; background: #DAEBEF; border: 1px solid #369;}
+#search_bar .btndisable { font-weight: normal; color: #999; cursor: default; background: #ccc; border: 1px solid #999;}
+#search_content { position: absolute; width: 100%; top: 33px; bottom: 0; border-top: 1px solid #fff; background: #fff; }

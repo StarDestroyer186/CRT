@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="111.82299"
+   height="145.2412"
+   viewBox="0 0 111.82298 145.2412"
+   enable-background="new 0 0 100.17 150.253"
+   xml:space="preserve"
+   sodipodi:docname="arrow-green.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs14629" /><sodipodi:namedview
+   id="namedview14627"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="6.8351378"
+   inkscape:cx="56.180287"
+   inkscape:cy="63.202822"
+   inkscape:window-width="2560"
+   inkscape:window-height="1377"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<g
+   id="g14624-2"
+   style="fill:#ffffff"
+   transform="matrix(1.0199667,0,0,0.91892024,5.120599,3.8038735)">
+	<polygon
+   fill="#77D200"
+   points="100.167,150.255 50.084,0 50.084,111.909 "
+   id="polygon14620-5"
+   style="fill:#ffffff"
+   transform="matrix(1.0887847,0,0,1.0519209,-4.4466925,-4.1395035)" />
+	<polygon
+   fill="#8DE428"
+   points="50.084,111.909 0,150.255 50.084,0 "
+   id="polygon14622-8"
+   style="fill:#ffffff"
+   transform="matrix(1.1002388,0,0,1.0455632,-5.020359,-3.3434451)" />
+</g><g
+   id="g14624"
+   style="fill:#008066"
+   transform="matrix(1,0,0,0.86519583,6.1926474,8.3808044)">
+	<polygon
+   fill="#77D200"
+   points="50.084,0 50.084,111.909 100.167,150.255 "
+   id="polygon14620"
+   style="fill:#318AFF" />
+	<polygon
+   fill="#8DE428"
+   points="50.084,0 50.084,111.909 0,150.255 "
+   id="polygon14622"
+   style="fill:#64A7FF" />
+</g>
+</svg>

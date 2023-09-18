@@ -11,7 +11,7 @@ include_once('lang.inc.php');
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Cache-Control" content="no-cache" />
 <meta http-equiv="Expires" content="30" />
-<title>Credence Tracker</title>
+<title>Credence Tracker V1.0</title>
 <link rel="Bookmark" href="<?php echo $TEXT['link-partner-site']; ?><?php echo $TEXT['link-fav-icon']; ?>" />
 <link rel="Shortcut Icon" href="<?php echo $TEXT['link-partner-site']; ?><?php echo $TEXT['link-fav-icon'];?>" />
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">

@@ -7,13 +7,6 @@ if (!isset($_SESSION['uid']) or (int) $_SESSION['uid'] < 1) {
 }
 include_once('../lang.inc.php');
 ?>
-<?php
-// echo "<pre>";
-// print_r($GLOBAL_HOST);
-// echo"<br>";
-// print_r($GLOBAL_PORT);
-// die;
- ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -29,7 +22,7 @@ include_once('../lang.inc.php');
 <link rel="apple-touch-icon-precomposed" href="../img/apple-touch-icon.png">
 <link type="text/css" rel="stylesheet" href="mcss/button.css"/>
 <link type="text/css" rel="stylesheet" href="mcss/bootstrap.css?v=<?php echo $last_ver['style.css']?>"/>
-<link type="text/css" rel="stylesheet" href="mcss/mobile_style.css"/>
+<link type="text/css" rel="stylesheet" href="mcss/mstyle.css"/>
 <link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
 <link type="text/css" rel="stylesheet" href="mcss/vanillaSelectBox.css"/>
 <link type="text/css" rel="stylesheet" href="mcss/picker.min.css"/>
@@ -453,6 +446,7 @@ JS_DRAW_TOOL_TOOL_DISTANCE = "<?php echo $TEXT['js-draw-tool-distance']?>";
 </script>
 
 <style type="text/css">
+	.ui-link{font-weight: bold !important;}
 .icheck { margin: 5px 10px; height: 20px; width: 20px; font-size: 12px; line-height: 20px; font-weight: normal; }
 .iselect { outline-style: none;  border: 1px solid #ccc; border-radius: 3px; }
 .oneline { width: 20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;  }

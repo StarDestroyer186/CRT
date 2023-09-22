@@ -787,7 +787,7 @@ include_once('lang.inc.php');
 				<a href="#" title="8.<?php echo $TEXT['manage-mgrexpense'] ?>"></a>
 			</li>
 		</ul>
-		</div>
+		
 		<!--manage account-->
 		<div id="tab_mgraccount" class="tab_content">
 			<div class="search_bar">
@@ -1594,6 +1594,7 @@ include_once('lang.inc.php');
 					</li>
 				</ul>
 			</div>
+		</div>
 		</div>
 	</div>
 	<!--new customer-->

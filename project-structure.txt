@@ -1,0 +1,26 @@
+Common PHP Imported files
+--------------------------------------------------------------
+common.inc.php
+    lang.inc.php
+        default.inc.php
+        config.inc.php
+    smtp.class.php
+
+db.class.php
+db.sqlsrv.php   
+svc.class.php
+default.inc.php
+autoload.php
+--------------------------------------------------------------
+Common file has collection of many common utility functions
+Lang file contains definitions to set program language
+    Default lists languages, date formats, time formats, default latitude and longitude, debug status and last version list of various files
+    Config has database configuration, mail config, some global variables and some server timezone configuration.
+SMTP has some smtp related class with functions
+==============================================================
+
+
+Javascript Imported files
+--------------------------------------------------------------
+
+

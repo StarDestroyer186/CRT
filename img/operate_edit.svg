@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="icons-notext"
+   style=""
+   version="1.1"
+   id="svg13150"
+   sodipodi:docname="operate_edit.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs13154" />
+  <sodipodi:namedview
+     id="namedview13152"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="4.0333333"
+     inkscape:cx="150"
+     inkscape:cy="74.876033"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg13150" />
+  <style
+     type="text/css"
+     id="style13142">.crud-icon &gt; svg { position: relative; top: -1px; }
+.crud-icon.light &gt; svg { fill: rgb(66, 66, 66); }
+.crud-icon.medium &gt; svg { height: 26px; width: 26px; }
+.icons-notext svg, .icons svg { position: relative; }</style>
+  <svg
+     class="crud-icon medium undefined light"
+     version="1.1"
+     id="svg13148">
+    <svg
+       focusable="false"
+       viewBox="0 0 24 24"
+       aria-hidden="true"
+       role="presentation"
+       version="1.1"
+       id="svg13146">
+      <path
+         fill="#424242"
+         d="M16.84,2.73C16.45,2.73 16.07,2.88 15.77,3.17L13.65,5.29L18.95,10.6L21.07,8.5C21.67,7.89 21.67,6.94 21.07,6.36L17.9,3.17C17.6,2.88 17.22,2.73 16.84,2.73M12.94,6L4.84,14.11L7.4,14.39L7.58,16.68L9.86,16.85L10.15,19.41L18.25,11.3M4.25,15.04L2.5,21.73L9.2,19.94L8.96,17.78L6.65,17.61L6.47,15.29"
+         id="path13144"
+         style="fill:#006680" />
+    </svg>
+  </svg>
+</svg>

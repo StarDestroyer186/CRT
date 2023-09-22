@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+.header { font: 12px Arial, Tahoma; font-weight: bold; color: #154BA0; background:#C2DEED; height: 25px; padding-left: 10px; }
+.header td { padding-left: 10px; }
+.header a { color: #154BA0; }
+.category { font: 12px Arial, Tahoma; color: #92A05A; height:20px; background-color: #FFFFD9; }
+.category td { border-bottom: 1px solid #DEDEB8; }
+.expire, .expire a:link, .expire a:visited { color: #666; }
+.default, .default a:link, .default a:visited { color: #000; }
+.checked, .checked a:link, .checked a:visited { color: #f00; }
+.today, .today a:link, .today a:visited { color: #0b0; }
+#calendar_year { position: absolute; display: none; line-height: 130%; background: #fff; z-index: 20001; }
+#calendar_year .col { float: left; background: #fff; margin-left: 1px; border: 1px solid #86B9D6; padding: 4px; }
+#calendar_month { position: absolute; display: none; background: #fff; line-height: 130%; border: 1px solid #86B9D6; padding: 4px; z-index: 20005; }
+.tableborder { background: white; border: 1px solid #86B9D6; }
+#year, #month { padding-right:10px; }
+input#hour, input#minute { background: #fff; padding: 0 2px; margin: 2px; width: 20px; height: 16px; border: 1px solid #999; }

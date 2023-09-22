@@ -1,4 +1,4 @@
- <?php
+<?php
 header('Access-Control-Allow-Origin:*');
 session_start();
 if (!isset($_SESSION['logined']) or !$_SESSION['logined'] or !isset($_SESSION['uid']) or (int) $_SESSION['uid'] < 1 or isset($_SESSION['share']) or $_SESSION['share']) {
@@ -991,7 +991,7 @@ JS_DRAW_TOOL_TOOL_DISTANCE = "<?php echo $TEXT['js-draw-tool-distance']?>";
                 <div class="content" style="min-height: 70px;">
                     <table border="0" cellpadding="0" cellspacing="0" style="padding: 0 10px">
                         <tr>
-							<td colspan=5 style="color:#2B82D4; font-weight: bold;border-bottom: 1px solid #DDDDDD; "><?php echo $TEXT['js-share-position']?></td>
+							<td colspan=5 style="color:#2B82D4; font-weight: bold;border-bottom: 1px solid #fff; "><?php echo $TEXT['js-share-position']?></td>
 						</tr>
 						<tr>
 							<td><?php echo $TEXT['js-share-position-active'] ?></td>

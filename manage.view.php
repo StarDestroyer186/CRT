@@ -324,7 +324,7 @@ ul.extend li { float: right; list-style: none; text-decoration: none; line-heigh
 		})
 	})
 	
-	// 去掉所有input的autocomplete, 显示指定的除外 
+	// 脠楼碌么脣霉脫脨input碌脛autocomplete, 脧脭脢戮脰赂露篓碌脛鲁媒脥芒 
 	$(function(){ 								  
 	   $('input:not([autocomplete]),textarea:not([autocomplete]),select:not([autocomplete])').attr('autocomplete', 'off'); 	 
 	});
@@ -397,13 +397,13 @@ ul.extend li { float: right; list-style: none; text-decoration: none; line-heigh
             <table id="usrlist" class="tab_report sortable">
             <thead>
                 <tr>
-                  <th width="5%"><?php echo $TEXT['info-order']?></th>
-                  <th width="15%"><?php echo $TEXT['info-username']?></th>
-                  <th width="10%"><?php echo $TEXT['info-available']?></th>
-                  <th width="20%"><?php echo $TEXT['login-account']?></th>
-				  <th width="15%"><?php echo $TEXT['info-userphone']?></th>
-				  <th width="15%"><?php echo $TEXT['info-limitcar']?></th>
-                  <th class="no-sort" width="10%"><?php echo $TEXT['info-operate']?></th>
+                  <th class="manage-header" width="5%"><?php echo $TEXT['info-order']?></th>
+                  <th class="manage-header" width="15%"><?php echo $TEXT['info-username']?></th>
+                  <th class="manage-header" width="10%"><?php echo $TEXT['info-available']?></th>
+                  <th class="manage-header" width="20%"><?php echo $TEXT['login-account']?></th>
+				  <th class="manage-header" width="15%"><?php echo $TEXT['info-userphone']?></th>
+				  <th class="manage-header" width="15%"><?php echo $TEXT['info-limitcar']?></th>
+                  <th class="manage-header no-sort" width="10%"><?php echo $TEXT['info-operate']?></th>
                 </tr>
             </thead>
             </table>
@@ -809,7 +809,7 @@ ul.extend li { float: right; list-style: none; text-decoration: none; line-heigh
                          </div>
                          <label id="lblsimno" for="simno">*<?php echo $TEXT['info-simcard']?></label>
                          <input id="simno" type="text" class="itext disablebox" name="simno" maxlength="20" />
-						 <!--隐藏设备密码-->
+						 <!--脪镁虏脴脡猫卤赂脙脺脗毛-->
                          <label for="dpass" style="display:none;"><?php echo $TEXT['info-devicepass']?></label>
                          <input id="dpass" style="display:none;" type="password" class="itext disablebox" name="dpass" maxlength="10" />
                          <label for="ztime">*<?php echo $TEXT['info-timezone']?></label>

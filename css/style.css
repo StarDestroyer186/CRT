@@ -900,9 +900,44 @@ select:focus {
   text-decoration: none;
 }
 #useinfo ul li a:hover {
-  background: #132e00;
-  color: #fff;
+  color: #132e00 !important;
   text-decoration: none;
+}
+.tree_table tr td{
+/*  padding-left: 40px !important;*/
+/* width: 123px !important;*/
+ background-size: 23px !important;
+/* padding-left: 35px !important;*/
+}
+.tree_table .parking {
+
+  background: url("../img/parking.svg") no-repeat right 12px center !important;
+    background-size: 20px !important;
+}
+.tree_table .online {
+  padding-right: 30px !important;
+  font-size: 15px !important;
+}
+.temp_1{
+  background-size: 20px !important;
+  font-size: 15px !important;
+}
+.fuel_1{
+  background-size: 20px !important;
+  font-size: 15px !important;
+  width: 50px !important;
+}
+.mil_24{
+  background-size: 20px !important;
+  font-size: 15px !important;
+}
+.max_speed_24{
+  background-size: 20px !important;
+  font-size: 15px !important;
+
+}
+.tree_table .end_state .max_speed_24{
+  margin-left: 11px !important;
 }
 #useinfo ul li#user {
   padding-left: 16px;
@@ -1208,6 +1243,7 @@ ul.tabbar li.tab_active a {
   background: url("../img/object_online.svg") no-repeat 0px center;
   padding-left: 12px;
   background-size: 14px 14px;
+  padding-right: 15px !important;
 }
 .tree_table .offline {
   background: url("../img/object_offline.svg") no-repeat 0px center;
@@ -1218,6 +1254,7 @@ ul.tabbar li.tab_active a {
   background: url("../img/gps_valid.svg") no-repeat 0px center;
   padding-left: 12px;
   background-size: 13px 13px;
+  padding-right: 16px !important;
 }
 .tree_table .cellvalid {
   background: url("../img/cell_valid.svg") no-repeat 0px center;
@@ -1286,8 +1323,9 @@ ul.tabbar li.tab_active a {
 .tree_table .end_state .mil_24 {
   transform: scale(0.95);
   background: url("../img/state_route.svg") no-repeat 0px center;
-  padding-left: 14px;
+  padding-left: 23px;
   background-size: 13px 13px;
+
 }
 .tree_table .end_state .max_speed_24 {
   transform: scale(0.95);
@@ -1299,7 +1337,8 @@ ul.tabbar li.tab_active a {
   transform: scale(0.95);
   background: url("../img/moving_time_24.svg") no-repeat 0px center;
   padding-left: 14px;
-  background-size: 15px 15px;
+  background-size: 20px !important;
+  margin-top: 10px !important;
 }
 .tree_table .end_state .idle_time_24 {
   transform: scale(0.95);
@@ -1828,6 +1867,10 @@ svg:not(:root),
 .chart-container {
   overflow: visible !important;
   z-index: 9999 !important;
+}
+
+.manage-header{
+  padding:1rem !important;
 }
 
 /*.highcharts-container { overflow: visible !important; }

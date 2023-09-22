@@ -206,7 +206,7 @@ ul.tabbar li.tab_active a { background-color: #fff; color: #000; border: 1px sol
 .tree_table { margin: 0; font-size: 100%; line-height: 20px; text-align: left; overflow: auto; width: 100%; border-collapse:collapse; }
 .tree_table tr:not(.end_state) { cursor: default; height: 47px; border-top: 1px solid #DDDDDD; }
 .tree_table tr.end_state { border-bottom: 1px solid #DDDDDD; }
-.tree_table tr.end_state li{ display: block; float: left; font-size:12px; color:#808080; }
+.tree_table tr.end_state li{ display: inline-flex; float: left; font-size:12px; color:#808080; }
 .tree_table th .tree_table td { text-align: left; }
 .tree_table .group { height: 40px; font-size: 16px; padding-left: 20px; cursor: pointer; margin: 0px 5px; }
 .tree_table .showall { opacity:0.5; outline: none; -webkit-appearance:none; border: none; border-radius: 0px; cursor: pointer; margin: 0px 5px; height: 14px; width: 14px; background: url("../../img/show.svg") no-repeat 0px center;  background-size : 14px 14px; }
@@ -228,19 +228,19 @@ ul.tabbar li.tab_active a { background-color: #fff; color: #000; border: 1px sol
 .tree_table tr.normal { color: #444444; }
 .tree_table tr.active { background-color: #DDDDDD; padding: 0 2px; font-weight: normal; }
 .tree_table tr.hover { background-color: #DDDDDD; padding: 0 2px; font-weight: normal; }
-.tree_table .end_state td ul { display:flex;float:left; justify-content:center; align-items:center; list-style: none; }
-.tree_table .end_state td ul li { float:left; }
-.tree_table .end_state .temp_1  { transform: scale(2); background: url("../../img/state_temp.svg") no-repeat 0px center; margin:14px; padding-left: 14px; background-size : 13px 13px; }
-.tree_table .end_state .fuel_1  { transform: scale(2); background: url("../../img/state_fuel.svg") no-repeat 0px center; margin:14px; padding-left: 14px; background-size : 13px 13px; }
-.tree_table .end_state .mil_24  { transform: scale(2); background: url("../../img/state_route.svg") no-repeat 0px center; margin:14px; padding-left: 14px; background-size : 13px 13px; }
-.tree_table .end_state .max_speed_24  { transform: scale(2); background: url("../../img/state_max_speed.svg") no-repeat 0px center; margin:14px; padding-left: 14px; background-size : 13px 13px; }
-.tree_table .end_state .moving_time_24  { transform: scale(2); background: url("../../img/moving_time_24.svg") no-repeat 0px center; margin:14px; padding-left: 14px; background-size : 15px 15px; }
-.tree_table .end_state .idle_time_24  { transform: scale(2); background: url("../../img/idle_time_24.svg") no-repeat 0px center; margin:14px; padding-left: 14px; background-size : 15px 15px; }
-.tree_table .end_state .stop_time_24  { transform: scale(2); background: url("../../img/stop_time_24.svg") no-repeat 0px center; margin:14px; padding-left: 14px; background-size : 15px 15px; }
-.tree_table .end_state .engine_time_24  { transform: scale(2); background: url("../../img/engine_time_24.svg") no-repeat 0px center; margin:14px; padding-left: 14px; background-size : 15px 15px; }
-.tree_table .end_state .total_mil  { transform: scale(2); background: url("../../img/odometer2.svg") no-repeat 0px center; margin:14px; padding-left: 14px; background-size : 13px 13px; }
-.tree_table .end_state .last_driver  { transform: scale(2); background: url("../../img/steering_wheel_green.svg") no-repeat 0px center; margin:14px; padding-left: 14px; background-size : 13px 13px; }
-.tree_table .end_state .door_state  { transform: scale(2); background: url("../../img/info_door.svg") no-repeat 0px center; margin:14px; padding-left: 14px; background-size : 13px 13px; }
+.tree_table .end_state td ul { display:flex;float:center; justify-content:center; align-items:center; list-style: none; }
+.tree_table .end_state td ul li { float:center; }
+.tree_table .end_state .temp_1  { transform: scale(2); background: url("../../img/state_temp.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
+.tree_table .end_state .fuel_1  { transform: scale(2); background: url("../../img/state_fuel.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
+.tree_table .end_state .mil_24  { transform: scale(2); background: url("../../img/state_route.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
+.tree_table .end_state .max_speed_24  { transform: scale(2); background: url("../../img/state_max_speed.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
+.tree_table .end_state .moving_time_24  { transform: scale(2); background: url("../../img/moving_time_24.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 15px 15px; }
+.tree_table .end_state .idle_time_24  { transform: scale(2); background: url("../../img/idle_time_24.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 15px 15px; }
+.tree_table .end_state .stop_time_24  { transform: scale(2); background: url("../../img/stop_time_24.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 15px 15px; }
+.tree_table .end_state .engine_time_24  { transform: scale(2); background: url("../../img/engine_time_24.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 15px 15px; }
+.tree_table .end_state .total_mil  { transform: scale(2); background: url("../../img/odometer2.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
+.tree_table .end_state .last_driver  { transform: scale(2); background: url("../../img/steering_wheel_green.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
+.tree_table .end_state .door_state  { transform: scale(2); background: url("../../img/info_door.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
 .page_objects #object-release { position: absolute; bottom: 2px; left: 0px; }
 .page_objects #object-back { position: absolute; bottom: 2px; right: 0px; }
 .page_objects #object-detail-back {float: right; bottom: 20px; right: 15px; }
@@ -264,7 +264,7 @@ ul.tabbar li.tab_active a { background-color: #fff; color: #000; border: 1px sol
 .page_history .iselect { width:90%; display:block; margin: 5px 10px; height: 33px; font-size: 13px; line-height: 28px; font-weight: normal; border-bottom: 1px solid #DDDDDD; }
 #page_history .input-group{ width:90%; margin-left: 10px;  }
 #page_history .input-group-addon { background: #EEEEEE url("../mimg/calendar.svg") no-repeat center center; cursor: pointer; background-size : 18px 18px; }
-#page_history .input-group input{ font-size: 12px; padding-left: 2px; padding-right: 0px; }
+#page_history .input-group input{ font-size: 12px; padding-left: 18x; padding-right: 0px; }
 .page_history_setting{ position: fixed; top: 51px; bottom: 0px; overflow-y:scroll; border: none; }
 
 /*#################################################*/

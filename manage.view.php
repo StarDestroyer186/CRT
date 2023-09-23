@@ -308,7 +308,7 @@ include_once('lang.inc.php');
 		}
 
 		.search_bar {
-			position: absolute;
+			position: inherit;
 			left: 4px;
 			top: 28px;
 			right: 4px;

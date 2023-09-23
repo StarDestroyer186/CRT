@@ -1,4 +1,4 @@
-<?php
+ <?php
 header('Access-Control-Allow-Origin:*');
 session_start();
 if (!isset($_SESSION['logined']) or !$_SESSION['logined'] or !isset($_SESSION['uid']) or (int) $_SESSION['uid'] < 1 or isset($_SESSION['share']) or $_SESSION['share']) {
@@ -1165,6 +1165,24 @@ include_once('lang.inc.php');
                 <div class="content" style="min-height: 70px;">
                     <table border="0" cellpadding="0" cellspacing="0" style="padding: 0 10px">
                         <tr>
+<<<<<<< HEAD
+							<td colspan=5 style="color:#2B82D4; font-weight: bold;border-bottom: 1px solid #DDDDDD; "><?php echo $TEXT['js-share-position']?></td>
+						</tr>
+						<tr>
+							<td><?php echo $TEXT['js-share-position-active'] ?></td>
+							<td><input id="share_position_active" type="checkbox" class="icheckbox"/></td>
+							<td><?php echo $TEXT['js-share-position-expire-on'] ?></td>
+							<td><input id="share_position_expire" type="checkbox" class="icheckbox"/></td>
+							<td><input id="shareexpired" type="text" class="itime disablebox" readonly="readonly" /></td>	
+						</tr>
+						<tr>
+							<td><?php echo $TEXT['js-share-position-name'] ?></td>
+							<td><input id="share_position_name" type="text" class="itext enablebox must"/></td>
+							<td><?php echo $TEXT['js-share-position-enable-delete'] ?></td>
+							<td><input id="share_position_delete" type="checkbox" class="icheckbox"/></td>
+						</tr>
+						<tr>
+=======
                             <td colspan=5 style="color:#2B82D4; font-weight: bold;border-bottom: 1px solid #fff; "><?php echo $TEXT['js-share-position'] ?></td>
                         </tr>
                         <tr>
@@ -1181,6 +1199,7 @@ include_once('lang.inc.php');
                             <td><input id="share_position_delete" type="checkbox" class="icheckbox" /></td>
                         </tr>
                         <tr>
+>>>>>>> 32ae5dac7d5ac8f62f2c7e04382ef8a289b3fc6e
                             <td><?php echo $TEXT['js-share-position-assets'] ?></td>
                             <td><select id="share_position_assets" class="iselect" multiple></select></td>
                         </tr>

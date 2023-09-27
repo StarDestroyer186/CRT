@@ -1,5 +1,6 @@
 var requestTimeout = 90000, isQueryTimeOut = false, currentChart = [], symbol4Color = [], chart4SymbolColor = [], charts;
-function exportExcel(name){   
+function exportExcel(name){  
+	
 	var tab_text = "<table border='2px'><tr bgcolor='#D5D5D5'>";
     var textRange; var j = 0;
     tab = document.getElementById('table_byrtime'); // id of table

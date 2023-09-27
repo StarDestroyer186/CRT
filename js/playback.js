@@ -1937,7 +1937,7 @@ function oninit() {
 			$("#fieldset_pro").css("top", "405px");
         }else{
             $("#seltime").css("display", "none");
-			$("#fieldset_pro").css("top", "345px");
+			$("#fieldset_pro").css("top", "400px");
         }
     });
     track = $.fn.Trackbar({renderTo: "#trackbar",

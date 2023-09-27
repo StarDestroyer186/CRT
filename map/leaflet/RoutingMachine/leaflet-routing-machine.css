@@ -10,6 +10,7 @@
     /*width: 32px;
     height: 32px;*/
 	display: none;
+    border-radius: 25px;
 }
 
 .leaflet-routing-container h2 {

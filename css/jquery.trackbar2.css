@@ -11,13 +11,15 @@
 .trackbar .bar {
 	position: relative;
 	margin-top: 4px;
-	cursor: default;
-	width: 15px;
+	cursor: drag;
+	width: 8px;
 	height: 8px;
 	z-index: 2;
 	line-height: 0px;
-	border: 2px solid;
-	background-color: #369;
+	border: 1px solid;
+	border-radius: 15px;
+	padding: 1px;
+	background-color: #fff;
 	border-color: #69c #036 #036 #69c;
 }
 .trackbar .holder {
@@ -32,9 +34,10 @@
 }
 .trackbar .tip {
 	color: #258;
-	padding: 3px 1px 0 0;
+	text-align: center;
+	padding: 4px 1px 0 0;
 	width: 50px;
-	text-align: right;
+	text-align: center;
 	font-size: 100%;
 	line-height: 10px;
 	background-color: #fff;

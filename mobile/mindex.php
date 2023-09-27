@@ -1,4 +1,4 @@
- <?php
+<?php
 header('Access-Control-Allow-Origin:*');
 session_start();
 if (!isset($_SESSION['uid']) or (int) $_SESSION['uid'] < 1) {

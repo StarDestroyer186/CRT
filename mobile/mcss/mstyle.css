@@ -46,7 +46,7 @@ ul { list-style:none; }
 .icon_succ { background: transparent url("../../img/icon_succ.png") no-repeat 16px center; }
 .icon_stop { background: transparent url("../../img/icon_stop.png") no-repeat 16px; }
 .tooltip { position:absolute; padding: 5px; border: 1px solid gray; font-size: 9pt; font-family: Arial, Tahoma; background-color: #fff; z-index: 30; }
-.icon-button { background-color: #2B82D4; width: 95%; border: none; color: white; padding: 1px 5px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; margin: 5px 2px;  cursor: pointer; border-radius: 4px; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); height: 35px; -webkit-appearance : none ;}
+.icon-button { background-color: #2B82D4 !important; width: 95%; border: none; color: white; padding: 1px 5px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; margin: 5px 2px;  cursor: pointer; border-radius: 4px; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); height: 35px; -webkit-appearance : none ;}
 .icon-button-back { padding-left: 20px; background: url(../mimg/arrow_left.svg) no-repeat center left; background-size : 15px 15px; vertical-align: top; -webkit-appearance : none; }
 
 /*#################################################*/
@@ -57,7 +57,20 @@ ul { list-style:none; }
 .page_menu .title-block i { position: absolute; top: 15px; right: 15px; width: 15px; height: 15px; display: block; background: transparent url("../mimg/wndclose.svg") no-repeat 0 center; cursor: pointer; }
 .page_menu ul { padding: 0 15px 30px 0; margin: 0; display: table; width: 100%; list-style: none; }
 .page_menu ul li { width: 33.333%; float: left; padding-top: 15px; padding-left: 15px; box-sizing: border-box; }
-.page_menu ul li a { color: #696969 !important; font-size: 14px; padding: 20px 10px; display: block; text-decoration: none; position: relative; font-weight: 400; text-align: center; background: #ffffff; -webkit-box-shadow: 0 0 5px 0 #eaeaea; box-shadow: 0 0 5px 0 #eaeaea; }
+.page_menu ul li a { 
+    color: #696969 !important; 
+    font-size: 14px; 
+    padding: 20px 10px; 
+    display: block; 
+    text-decoration: none; 
+    position: relative; 
+    font-weight: 400; 
+/*    border-radius: 50px;*/
+    text-align: center; 
+/*    background: #ffffff; */
+/*    -webkit-box-shadow: 0 0 5px 0 #eaeaea; */
+/*    box-shadow: 0 0 5px 0 #eaeaea; */
+}
 .page_menu ul li a:hover { opacity: 0.8; }
 .page_menu ul li a.selected { }
 .page_menu ul li a i { width: 100%; font-size: 25px; margin-bottom: 10px; display: inline-block; }
@@ -188,25 +201,37 @@ ul.nav { width:100%; margin:0 auto; padding:0; list-style:none; background-color
 .page_objects { position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; z-index: 1; }
 .page_objects .page-title { box-sizing: border-box; margin-bottom: 15px; font-size: 18px; line-height: 50px; padding: 0 50px; height: 50px; display: table; width: 100%; color: #ffffff; background-color: #2b82d4; }
 .page_objects  .title-block i { position: absolute; top: 11px; left: 15px; width: 25px; height: 25px;  background: transparent url("../mimg/page.svg") no-repeat 0 center; cursor: pointer; }
-#sch { position: absolute; top: 70px; height: 32px; left: 15px; right: 15px; border: 1px solid #E8E8E8; background: #BCD0E7; z-index: 1; }
+#sch { position: absolute; top: 70px; height: 32px; left: 15px; right: 15px; background: #BCD0E7; z-index: 1; --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); }
 #sch #device { border: none; padding: 7px; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-right: 100px; height: 32px; outline-style: none; }  
-#sch #selone { background-color: #EEEEEE; border: 1px solid #E8E8E8; padding: 7px; height: 16px; width: 50px; float: right; position: relative; top: -32px; -webkit-appearance : none; }
+#sch #selone { 
+    background-color: #5BC872;
+/*    border: 1px solid #E8E8E8;*/
+    padding: 7px;
+    height: 32px;
+    width: 65px;
+    float: right;
+    position: relative;
+    top: -32px;
+    -webkit-appearance: none;
+}
 #mod { position: absolute; left: 15px; right: 15px; top: 120px; bottom: 1px; }
 .tablist { position: absolute; width: 100%; bottom: 45px; top: 35px; margin: auto 0px; overflow-y: auto; border: 1px solid #DDDDDD; border-top: none; }
 
 /*tabbar*/
-ul.tabbar { margin:2px 0px; padding-left: 0px; padding-bottom: 10px; border-bottom: 1px solid #DDDDDD; display:flex;}
+ul.tabbar { background-color: #fff; margin:2px 0px; padding-left: 0px; padding-bottom: 10px; border-bottom: 1px solid #DDDDDD; display:flex;}
 ul.tabbar li { list-style: none; margin: auto; width:100%;  align-content: space-between;}
-ul.tabbar li a { padding: 5px 2px 10px 2px; height: 30px; font-size:12px; font-weight: normal; border: none; background: #F8F8F8; text-decoration: none; }
+ul.tabbar li a { padding:10px 20px; height: 30px; font-size:12px; font-weight: normal; border: none; background: #fff; text-decoration: none; }
 ul.tabbar li a:visited { color: #000; } 
-ul.tabbar li.tab_active a { background-color: #fff; color: #000; border: 1px solid #DDDDDD; border-bottom: none; }
+ul.tabbar li.tab_active a { background-color: #5BC872; color: #000; border: 1px solid #DDDDDD; border-bottom: none; }
 
 
 /*tree grid*/
 .tree_table { margin: 0; font-size: 100%; line-height: 20px; text-align: left; overflow: auto; width: 100%; border-collapse:collapse; }
 .tree_table tr:not(.end_state) { cursor: default; height: 47px; border-top: 1px solid #DDDDDD; }
 .tree_table tr.end_state { border-bottom: 1px solid #DDDDDD; }
-.tree_table tr.end_state li{ display: inline-flex; float: left; font-size:12px; color:#808080; }
+.tree_table tr.end_state li{ display: block !important; float: left; font-size:12px; color:#808080; }
 .tree_table th .tree_table td { text-align: left; }
 .tree_table .group { height: 40px; font-size: 16px; padding-left: 20px; cursor: pointer; margin: 0px 5px; }
 .tree_table .showall { opacity:0.5; outline: none; -webkit-appearance:none; border: none; border-radius: 0px; cursor: pointer; margin: 0px 5px; height: 14px; width: 14px; background: url("../../img/show.svg") no-repeat 0px center;  background-size : 14px 14px; }

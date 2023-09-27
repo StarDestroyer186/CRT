@@ -74,7 +74,7 @@ select:focus {
 .button-search {
   display: inline-block;
 /*  padding: 5px;*/
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
@@ -95,13 +95,17 @@ select:focus {
 }
 #sch {
   position: absolute;
-  width: 25%;
+  width: 340px;
   top: 4px;
   height: 32px;
   left: 4px;
-  border: 1px solid #369;
+/*  border: 1px solid #369;*/
   background: #f8f8f8;
   z-index: 1;
+/*  border-radius: 5px;*/
+--tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 #sch #asset_list_item {
   width: 93px;
@@ -117,11 +121,12 @@ select:focus {
   line-height: 20px;
   color: #000;
   background: #fff;
-  border: 1px solid #778;
+  border: 1px solid #F1F1F1;
   cursor: default;
   font-weight: normal;
   background: #fff url("../img/mapsearch.gif") no-repeat 4px center;
   padding-left: 22px;
+  font-size: 12px;
 }
 #sch #selone {
   position: absolute;
@@ -134,9 +139,6 @@ select:focus {
   cursor: pointer;
   color: #000;
 }
-
-
-
 #sch #showobjchart {
   position: absolute;
   max-width: 30px;
@@ -160,10 +162,13 @@ select:focus {
 #mod {
   position: absolute;
   left: 4px;
-  width: 25%;
+  width: 340px;
   top: 42px;
   bottom: 4px;
-  border: 1px solid #369;
+ --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);  
+    border-radius: 5px;
 }
 .tablist {
   position: absolute;
@@ -192,12 +197,11 @@ select:focus {
 #map {
   position: absolute;
   top: 4px;
-  /* left: 350px; */
-  width: 75%;
+  left: 350px;
   right: 0px;
   bottom: 8px;
-  border: 1px solid #369;
-  z-index: 1;
+/*  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;*/
+z-index: 1;
 }
 #loadmapwait {
   position: absolute;
@@ -797,11 +801,17 @@ select:focus {
   position: absolute;
   left: 40px;
   bottom: 10px;
-  width: 230px;
+  width: 200px;
   height: 24px;
   background: #fff;
-  border: 1px solid #369;
+  border-radius: 20px;
+  background-opacity: 0;
+  padding: 5px;
+/*  border: 1px solid #369;*/
   z-index: 1000;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 #mapsearchtext {
   position: absolute;
@@ -809,9 +819,11 @@ select:focus {
   bottom: 1px;
   height: 18px;
   width: 202px;
-  border: 1px solid #999;
-  background: #fff url("../img/mapsearch.gif") no-repeat 4px center;
-  padding-left: 22px;
+   --tw-border-opacity: 1;
+    border-color: rgb(59 130 246 / var(--tw-border-opacity));  background: #fff url("../img/mapsearch.gif") no-repeat 4px center;
+/*  padding-left: 22px;*/
+  border-radius: 20px;
+  padding: 5px;
 }
 .icon_info {
   background: transparent url("../img/icon_info.png") no-repeat 16px center;
@@ -904,44 +916,9 @@ select:focus {
   text-decoration: none;
 }
 #useinfo ul li a:hover {
-  color: #132e00 !important;
+/*  background: #132e00;*/
+  color: #fff;
   text-decoration: none;
-}
-.tree_table tr td{
-/*  padding-left: 40px !important;*/
-/* width: 123px !important;*/
- background-size: 20px !important;
-/* padding-left: 35px !important;*/
-}
-.tree_table .parking {
-
-  background: url("../img/parking.svg") no-repeat right 12px center !important;
-    background-size: 20px !important;
-}
-.tree_table .online {
-  padding-right: 24px !important;
-  font-size: 15px !important;
-}
-.temp_1{
-  background-size: 20px !important;
-  font-size: 13px !important;
-}
-.fuel_1{
-  background-size: 20px !important;
-  font-size: 13px !important;
-  width: 50px !important;
-}
-.mil_24{
-  background-size: 20px !important;
-  font-size: 13px !important;
-}
-.max_speed_24{
-  background-size: 20px !important;
-  font-size: 13px !important;
-
-}
-.tree_table .end_state .max_speed_24{
-  margin-left: 11px !important;
 }
 #useinfo ul li#user {
   padding-left: 16px;
@@ -1034,6 +1011,9 @@ ul.tabbar li.tab_active a {
   list-style: none;
   padding: 0;
   margin: 0;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .tabbar li {
@@ -1157,7 +1137,7 @@ ul.tabbar li.tab_active a {
 .tree_table {
   margin: 0;
   font-size: 100%;
-  line-height: 20px;
+  line-height: 25px;
   text-align: left;
   overflow: hidden;
   width: 100%;
@@ -1166,15 +1146,15 @@ ul.tabbar li.tab_active a {
 .tree_table tr:not(.end_state) {
   cursor: default;
   height: 25px;
-  border-top: 1px solid #dddddd;
+/*  border-top: 1px solid #dddddd;*/
 }
 .tree_table tr.end_state {
-  border-bottom: 1px solid #dddddd;
+/*  border-bottom: 1px solid #dddddd;*/
 }
 .tree_table tr.end_state li {
-  display: block;
+  display: block !important;
   float: left;
-  font-size: 13px;
+  font-size: 12px;
   color: #808080;
 }
 .tree_table th .tree_table td {
@@ -1182,7 +1162,7 @@ ul.tabbar li.tab_active a {
 }
 .tree_table .group {
   font-weight: bold;
-  border-top: 1px solid #dddddd;
+/*  border-top: 1px solid #dddddd;*/
   padding-left: 20px;
   cursor: pointer;
 }
@@ -1238,7 +1218,7 @@ ul.tabbar li.tab_active a {
   background-size: 14px 14px;
 }
 .tree_table .menu {
-  background: url("../img/menu.svg") no-repeat 2px center;
+   background: url("../img/menu.svg") no-repeat 2px center;
   padding-left: 8px;
   cursor: pointer;
   background-size: 4px 16px !important;
@@ -1247,7 +1227,6 @@ ul.tabbar li.tab_active a {
   background: url("../img/object_online.svg") no-repeat 0px center;
   padding-left: 12px;
   background-size: 14px 14px;
-  padding-right: 15px !important;
 }
 .tree_table .offline {
   background: url("../img/object_offline.svg") no-repeat 0px center;
@@ -1255,7 +1234,7 @@ ul.tabbar li.tab_active a {
   background-size: 14px 14px;
 }
 .tree_table .gpsvalid {
-  background: url("../img/gps_valid.svg") no-repeat 0px center;
+ background: url("../img/gps_valid.svg") no-repeat 0px center;
   padding-left: 10px;
   background-size: 13px 13px;
   padding-right: 16px !important;
@@ -1272,7 +1251,7 @@ ul.tabbar li.tab_active a {
 }
 .tree_table .alarm {
   background: url("../img/alarm.svg") no-repeat 0px center;
-  padding-left: 21px;
+  padding-left: 19px;
   cursor: pointer;
   background-size: 13px 14px;
 }
@@ -1317,7 +1296,6 @@ ul.tabbar li.tab_active a {
   background: url("../img/state_temp.svg") no-repeat 0px center;
   padding-left: 14px;
   background-size: 13px 13px;
-  width: 50px !important;
 }
 .tree_table .end_state .fuel_1 {
   transform: scale(0.95);
@@ -1328,72 +1306,63 @@ ul.tabbar li.tab_active a {
 .tree_table .end_state .mil_24 {
   transform: scale(0.95);
   background: url("../img/state_route.svg") no-repeat 0px center;
-  padding-left: 23px;
+  padding-left: 14px;
   background-size: 13px 13px;
-  width: 50px !important;
-
 }
 .tree_table .end_state .max_speed_24 {
   transform: scale(0.95);
   background: url("../img/state_max_speed.svg") no-repeat 0px center;
-  padding-left: 24px;
+  padding-left: 14px;
   background-size: 13px 13px;
 }
 .tree_table .end_state .moving_time_24 {
   transform: scale(0.95);
   background: url("../img/moving_time_24.svg") no-repeat 0px center;
-  padding-left: 22px;
-  background-size: 20px !important;
-  margin-top: 10px !important;
-  width: 50px !important;
-  margin-right: -9px !important;
+  padding-left: 14px;
+  background-size: 15px 15px;
+  font-size: 13px !important;
 }
 .tree_table .end_state .idle_time_24 {
   transform: scale(0.95);
   background: url("../img/idle_time_24.svg") no-repeat 0px center;
-  padding-left: 22px;
- background-size: 20px !important;
-  margin-top: 10px !important;
-   width: 50px !important;
-   margin-right: -9px !important;
+  padding-left: 14px;
+  background-size: 15px 15px;
+  font-size: 13px !important;
 }
 .tree_table .end_state .stop_time_24 {
   transform: scale(0.95);
   background: url("../img/stop_time_24.svg") no-repeat 0px center;
-   padding-left: 22px;
- background-size: 20px !important;
-  margin-top: 10px !important;
+  padding-left: 14px;
+  background-size: 15px 15px;
+  font-size: 13px !important;
 }
 .tree_table .end_state .engine_time_24 {
   transform: scale(0.95);
   background: url("../img/engine_time_24.svg") no-repeat 0px center;
-    padding-left: 22px;
- background-size: 20px !important;
-  margin-top: 10px !important;
-  margin-left: 23px !important;
+  padding-left: 14px;
+  background-size: 15px 15px;
+  font-size: 13px !important;
 }
 .tree_table .end_state .total_mil {
   transform: scale(0.95);
   background: url("../img/odometer2.svg") no-repeat 0px center;
-  padding-left: 22px;
-  background-size: 20px !important;
-  margin-top: 10px !important;
-  margin-right: -16px !important;
+  padding-left: 14px;
+  background-size: 13px 13px;
+  font-size: 13px !important;
 }
 .tree_table .end_state .last_driver {
   transform: scale(0.95);
   background: url("../img/steering_wheel_green.svg") no-repeat 0px center;
-  padding-left: 22px;
-  background-size: 20px !important;
-  margin-top: 10px !important;
+  padding-left: 14px;
+  background-size: 13px 13px;
+  font-size: 13px !important;
 }
 .tree_table .end_state .door_state {
   transform: scale(0.95);
   background: url("../img/info_door.svg") no-repeat 0px center;
-  padding-left: 22px;
-  background-size: 20px !important;
-  margin-top: 10px !important;
-  margin-right: -20px;
+  padding-left: 14px;
+  background-size: 13px 13px;
+  font-size: 13px !important;
 }
 
 /*dialog*/
@@ -1459,11 +1428,13 @@ ul.tabbar li.tab_active a {
 }
 .dialog .in {
   background: #fff;
-  border: 1px solid #e5e5e5;
+/*  border: 1px solid #e5e5e5;*/
   position: relative;
-  top: -2px;
-  left: -2px;
-  margin: 0 auto;
+  /*top: -2px;
+  left: -2px;*/
+  margin: auto;
+  padding:1rem;
+  border-radius: 5px;
 }
 .dialog h3 {
   background-color: #36c;
@@ -1505,7 +1476,7 @@ ul.tabbar li.tab_active a {
 }
 .dialog .content {
   margin: 2px 8px;
-  border: 1px dashed #e7e7e7;
+/*  border: 1px dashed #e7e7e7;*/
   overflow: auto;
 }
 .dialog td {
@@ -1522,19 +1493,21 @@ ul.tabbar li.tab_active a {
 .dialog .right {
   float: right;
 }
-.dialog .delete {
-  width: 32px;
-  height: 18px;
-  background: transparent url("../img/delete.png") no-repeat center;
+/*.dialog .delete {
+  width: auto;
+/*  background: transparent url("../img/delete.png") no-repeat center;*/
   color: #000;
   cursor: pointer;
-  border: 1px solid #369;
+/*  border: 1px solid #369;*/
+}*/
+
+.dialog clear-notification{
+
 }
 .dialog p {
   margin: 0;
   padding: 4px 8px;
   line-height: 16px;
-  background: #e1e1e1;
   color: #369;
   border-bottom: 1px solid #999;
 }
@@ -1572,6 +1545,13 @@ ul.tabbar li.tab_active a {
   background-size: 14px 14px;
 }
 
+#dlg_altinfo{
+  border-radius: 15px;
+}
+.iselect{
+  border:1px solid #F1F1F1;
+  color: #757575;
+}
 .infowindow {
   line-height: 1.35;
   font-size: 100%;
@@ -1888,11 +1868,131 @@ svg:not(:root),
   z-index: 9999 !important;
 }
 
-.manage-header{
-  padding:1rem !important;
-}
-
 /*.highcharts-container { overflow: visible !important; }
 .highcharts-container svg {
     overflow: visible !important;
 }*/
+.tree_table tr td{
+/*  padding-left: 40px !important;*/
+/* width: 123px !important;*/
+ background-size: 18px !important;
+/* padding-left: 35px !important;*/
+}
+.tree_table .parking {
+
+  background: url("../img/parking.svg") no-repeat right 12px center !important;
+    background-size: 17px !important;
+}
+.tree_table .online {
+  padding-right: 9px !important;
+  font-size: 15px !important;
+}
+.temp_1{
+  background-size: 20px !important;
+  font-size: 13px !important;
+}
+.fuel_1{
+  background-size: 20px !important;
+  font-size: 13px !important;
+  width: 50px !important;
+}
+.mil_24{
+  background-size: 20px !important;
+  font-size: 13px !important;
+}
+.max_speed_24{
+  background-size: 20px !important;
+  font-size: 13px !important;
+
+}
+.tree_table .end_state .max_speed_24{
+  margin-left: 11px !important;
+}
+.tree_table .end_state .temp_1 {
+  transform: scale(0.95);
+  background: url("../img/state_temp.svg") no-repeat 0px center;
+  padding-left: 14px;
+  background-size: 13px 13px;
+  width: 50px !important;
+  font-size: 18px;
+}
+.tree_table .end_state .fuel_1 {
+  transform: scale(0.95);
+  background: url("../img/state_fuel.svg") no-repeat 0px center;
+  padding-left: 14px;
+  background-size: 13px 13px;
+}
+.tree_table .end_state .mil_24 {
+  transform: scale(0.95);
+  background: url("../img/state_route.svg") no-repeat 0px center;
+  padding-left: 23px;
+  background-size: 13px 13px;
+  width: 50px !important;
+}
+.tree_table .end_state .max_speed_24 {
+  transform: scale(0.95);
+  background: url("../img/state_max_speed.svg") no-repeat 0px center;
+  padding-left: 24px;
+  background-size: 13px 13px;
+}
+.tree_table .end_state .moving_time_24 {
+  transform: scale(0.95);
+  background: url("../img/moving_time_24.svg") no-repeat 0px center;
+  padding-left: 22px;
+  background-size: 20px !important;
+  margin-top: 10px !important;
+  width: 50px !important;
+  margin-right: -9px !important;
+}
+.tree_table .end_state .idle_time_24 {
+  transform: scale(0.95);
+  background: url("../img/idle_time_24.svg") no-repeat 0px center;
+  padding-left: 22px;
+ background-size: 20px !important;
+  margin-top: 10px !important;
+   width: 50px !important;
+   margin-right: -9px !important;
+}
+.tree_table .end_state .stop_time_24 {
+  transform: scale(0.95);
+  background: url("../img/stop_time_24.svg") no-repeat 0px center;
+   padding-left: 22px;
+ background-size: 20px !important;
+  margin-top: 10px !important;
+}
+.tree_table .end_state .engine_time_24 {
+  transform: scale(0.95);
+  background: url("../img/engine_time_24.svg") no-repeat 0px center;
+    padding-left: 22px;
+ background-size: 20px !important;
+  margin-top: 10px !important;
+  margin-left: 23px !important;
+}
+.tree_table .end_state .total_mil {
+  transform: scale(0.95);
+  background: url("../img/odometer2.svg") no-repeat 0px center;
+  padding-left: 22px;
+  background-size: 20px !important;
+  margin-top: 10px !important;
+  margin-right: -16px !important;
+}
+.tree_table .end_state .last_driver {
+  transform: scale(0.95);
+  background: url("../img/steering_wheel_green.svg") no-repeat 0px center;
+  padding-left: 22px;
+  background-size: 20px !important;
+  margin-top: 10px !important;
+}
+.tree_table .end_state .door_state {
+  transform: scale(0.95);
+  background: url("../img/info_door.svg") no-repeat 0px center;
+  padding-left: 22px;
+  background-size: 20px !important;
+  margin-top: 10px !important;
+  margin-right: -20px;
+}
+#tab_all{
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}

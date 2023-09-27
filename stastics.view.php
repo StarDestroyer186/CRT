@@ -281,7 +281,7 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; font-size: 12px; 
 <body onload="oninit();">
 <div id="stastics">
 	<ul class="tabbar">
-		<li target="#tab_byrtime" class="tab_active"><a href="#" title="1.<?php echo $TEXT['report-byrtime']?>"></a></li>
+		<li target="#tab_byrtime" class="tab_active" style="padding: 7px !important;"><a href="#" title="1.<?php echo $TEXT['report-byrtime']?>" ></a></li>
 		<li target="#tab_byobj" ><a href="#" title="2.<?php echo $TEXT['report-byobject']?>"></a></li>
 		<li target="#tab_byuser"><a href="#" title="3.<?php echo $TEXT['report-byuser']?>"></a></li>
 	</ul>

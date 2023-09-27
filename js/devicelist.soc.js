@@ -342,7 +342,7 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
 		$("<td></td>").text('').appendTo($tr);
 		$td = $("<td colspan=8></td>").appendTo($tr);
 		$("<ul style='list-style: none;'></ul>").appendTo($td);
-		
+		console.log('scope 1');
 		$("<li style='width: 60px;' id='temp_1'></li>").appendTo($td);
 		$("<li style='width: 60px;' id='fuel_1'></li>").appendTo($td);
 		$("<li style='width: 40px; cursor:pointer;' id='mil_24'></li>").appendTo($td); 
@@ -383,17 +383,16 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
 			$("<td></td>").text('').appendTo($tr);
 			$td = $("<td colspan=8></td>").appendTo($tr);
 			$("<ul style='list-style: none;'></ul>").appendTo($td);
-			
-			$("<li style='width: 60px;' id='temp_1'></li>").appendTo($td);
-			$("<li style='width: 60px;' id='fuel_1'></li>").appendTo($td);
-			$("<li style='width: 40px; cursor:pointer;' id='mil_24'></li>").appendTo($td); 
-			$("<li style='width: 45px;' id='max_speed_24'></li>").appendTo($td);
-			$("<li style='width: 58px;' id='moving_time_24'></li>").appendTo($td); 
-			$("<li style='width: 60px;' id='idle_time_24'></li>").appendTo($td);
-			$("<li style='width: 40px;' id='stop_time_24'></li>").appendTo($td);
-			$("<li style='width: 45px;' id='engine_time_24'></li>").appendTo($td);
-			$("<li style='width: 58px;' id='total_mil'></li>").appendTo($td);
-			$("<li style='width: 62px;' id='door_state'></li>").appendTo($td);
+				$("<li style='width: 60px;' id='temp_1'></li>").appendTo($td);
+				$("<li style='width: 60px;' id='fuel_1'></li>").appendTo($td);
+				$("<li style='width: 40px; cursor:pointer;' id='mil_24'></li>").appendTo($td); 
+				$("<li style='width: 45px;' id='max_speed_24'></li>").appendTo($td);
+				$("<li style='width: 58px;' id='moving_time_24'></li>").appendTo($td); 
+				$("<li style='width: 60px;' id='idle_time_24'></li>").appendTo($td);
+				$("<li style='width: 40px;' id='stop_time_24'></li>").appendTo($td);
+				$("<li style='width: 45px;' id='engine_time_24'></li>").appendTo($td);
+				$("<li style='width: 58px;' id='total_mil'></li>").appendTo($td);
+				$("<li style='width: 62px;' id='door_state'></li>").appendTo($td);
 			$("<li id='last_driver'></li>").appendTo($td);
         } 
 		if(selid == n){
@@ -649,17 +648,42 @@ function dlgAlarmInfo(keyid, toastShow){
 				$("body").append("<div class='modalmask'></div>");
 				$dlg.append("<span id='close' class='dialog_cancel'></span>");
 				
+				// var $ul = $dlg.find("#altul");
+				// $ul.empty();
+				// for(var i=0; i<json.length; i++){
+				// 	var jo = json[i];
+				// 	var status = "<div class='event-notification'><strong>" + jo.c + "</strong>"
+				// 		+"<button class='delete clear-notification' type='button' onClick='cancelAlarm(this,"+jo.n+")' value='' /></button>[ " + (i + 1) +" ] " + jo.a + "<br>"
+				// 		+  $.format.date(jo.t, JS_DEFAULT_DATETIME_fmt_JS) + "<br>"
+				// 		+ "<a class='tab' style ='font-size: 12px; color: #4D8ED9; text-decoration: none;' target='_blank' href="+JS_GOOGLE_MAP_BASE_LINK+"/maps?hl=en&q="+jo.y / 1000000 + "," + jo.x / 1000000+">"+(jo.y / 1000000).toFixed(5) + "," + (jo.x / 1000000).toFixed(5)+" </a>" + "<br>"
+				// 		+ jo.e + "</div><br>";
+				// 	$("<li></li>").html(status).appendTo($ul);
+				// }
+
 				var $ul = $dlg.find("#altul");
 				$ul.empty();
-				for(var i=0; i<json.length; i++){
-					var jo = json[i];
-					var status = "[ " + jo.c + " ]<br>"
-						+"<input class='delete' type='button' onClick='cancelAlarm(this,"+jo.n+")' value='' />[ " + (i + 1) +" ] " + jo.a + "<br>"
-						+  $.format.date(jo.t, JS_DEFAULT_DATETIME_fmt_JS) + "<br>"
-						+ "<a class='tab' style ='font-size: 12px; color: #4D8ED9; text-decoration: none;' target='_blank' href="+JS_GOOGLE_MAP_BASE_LINK+"/maps?hl=en&q="+jo.y / 1000000 + "," + jo.x / 1000000+">"+(jo.y / 1000000).toFixed(5) + "," + (jo.x / 1000000).toFixed(5)+" </a>" + "<br>"
-						+ jo.e + "<br>";
-					$("<li></li>").html(status).appendTo($ul);
+				for (var i = 0; i < json.length; i++) {
+				    var jo = json[i];
+				    var status = `
+				        <div style="padding: 1rem; margin: 0 auto; background-color: #ffffff; border-radius: 0.75rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: flex; align-items: center; gap: 1rem;" class='event-notification'>
+				            <div style="justify-content:between">
+				                <div style="font-size: 1rem; font-weight: 500; color: #000000;"><strong>${jo.c}</strong></div>
+				                <span>Event : ${jo.a}</span></br>
+				                <span>Date : ${jo.t}</span></br>
+				                <span>Co-ordinates : <a style="font-size: 12px; color: #4D8ED9; text-decoration: none;" target="_blank" href="${JS_GOOGLE_MAP_BASE_LINK}/maps?hl=en&q=${jo.y / 1000000},${jo.x / 1000000}">${(jo.y / 1000000).toFixed(5)},${(jo.x / 1000000).toFixed(5)}</a></span>
+				                <span>Speed : ${jo.e}</span>
+				            </div>
+				            <div style="flex-shrink: 0;">
+				            	<button class="delete clear-notification" type="button" onClick="cancelAlarm(this, ${jo.n})" value=""><img src="../img/delete.png"></button>
+				            </div>
+				        </div>
+				        <br>
+				    `;
+				    $("<li></li>").html(status).appendTo($ul);
 				}
+
+
+
 				$dlg.find("span#altinfo").html(status);
 				$dlg.find("#close").click(function() {
 					$dlg.css("display", "none");

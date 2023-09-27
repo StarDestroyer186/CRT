@@ -178,9 +178,9 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
         $tr = $("<tr class='a'></tr>").attr("g", gid).attr("t", gtxt).appendTo($tbody);
 		
         $KG = $tr;
-		$("<div style='background-color: #fff ;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='showall'></div>").attr("title",JS_SHOW_ALL).appendTo($tr).find("input").prop('checked', show).css({opacity: show ? 1.0 : 0.5});
-		$("<div style='background-color: #fff;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='trackall'></div>").attr("title",JS_TRACK_ALL).appendTo($tr);
-        $g = $("<th style='word-wrap:break-word;word-break:break-all;'></th>").text(gtxt).attr("colspan", "8");
+		$("<span style='background-color: #fff ;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='showall'></span>").attr("title",JS_SHOW_ALL).appendTo($tr).find("input").prop('checked', show).css({opacity: show ? 1.0 : 0.5});
+		$("<span style='background-color: #fff;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='trackall'></span>").attr("title",JS_TRACK_ALL).appendTo($tr);
+        $g = $("<span style='word-wrap:break-word;word-break:break-all;'></span>").text(gtxt).attr("colspan", "8");
         if(JS_DEFAULT_COLLAPSED == 0){
 			$g.addClass("group open").appendTo($tr);
 		}else{
@@ -1597,7 +1597,7 @@ function showAllObj(isShow){
 
 function updateShow() {
     var $tabs = $(".tree_table");
-    var $ths = $tabs.find("tbody tr div");
+    var $ths = $tabs.find("tbody tr span.group");
 	
     $ths.unbind("click").click(function() {
         if ($(this).is(".open")) {

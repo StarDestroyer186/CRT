@@ -175,7 +175,7 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
     var $KG = Groups[tgkey];
     if(!$KG){
         $tbody = $("<tbody></tbody>").appendTo("#" + tid);
-        $tr = $("<tr class='a'></tr>").attr("g", gid).attr("t", gtxt).appendTo($tbody);
+        $tr = $("<tr class='a' data-id='44'></tr>").attr("g", gid).attr("t", gtxt).appendTo($tbody);
 		
         $KG = $tr;
 		$("<th style='display:flex; justify-items:between;'><span style='background-color: #fff ;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='showall'></span>").attr("title",JS_SHOW_ALL).appendTo($tr).find("input").prop('checked', show).css({opacity: show ? 1.0 : 0.5});

@@ -208,7 +208,7 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
 				track = $keyitem.find("td:eq(1) input").is(':checked');
 			}			
 		}
-		$("<td><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox'></input></td>").attr("n", n).attr("title",JS_SHOW).appendTo($tr).find("input").prop('checked', show);
+		$("<div><td><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox'></input></td>").attr("n", n).attr("title",JS_SHOW).appendTo($tr).find("input").prop('checked', show);
 		$("<td><input style='margin: 0px 4px; height: 16px; width: 16px;;' type='checkbox'></input></td>").attr("n", n).attr("title",JS_TRACK).appendTo($tr).find("input").prop('checked', track);
         $("<td style='word-wrap:break-word;word-break:break-all;'></td>").attr("c", c).attr("x", x).attr("y", y).attr("sp", s).attr("d", d).attr("i", i).attr("t", t).attr("dn", dn).attr("dt", dt).attr("io", io).attr("zt", zt).attr("ex", ex).html(c + "<br/>").appendTo($tr);
         $("<td></td>").text(p.tip).attr('tip',p.tip).appendTo($tr);

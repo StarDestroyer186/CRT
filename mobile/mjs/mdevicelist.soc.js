@@ -178,7 +178,7 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
         $tr = $("<tr class='a'></tr>").attr("g", gid).attr("t", gtxt).appendTo($tbody);
 		
         $KG = $tr;
-		$("<th><span style='background-color: #fff ;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='showall'></span>").attr("title",JS_SHOW_ALL).appendTo($tr).find("input").prop('checked', show).css({opacity: show ? 1.0 : 0.5});
+		$("<th style='display:flex; justify-items:between;'><span style='background-color: #fff ;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='showall'></span>").attr("title",JS_SHOW_ALL).appendTo($tr).find("input").prop('checked', show).css({opacity: show ? 1.0 : 0.5});
 		$("<span style='background-color: #fff;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='trackall'></span>").attr("title",JS_TRACK_ALL).appendTo($tr);
         $g = $("<span style='word-wrap:break-word;word-break:break-all;'></span></th>").text(gtxt).attr("colspan", "8");
         if(JS_DEFAULT_COLLAPSED == 0){

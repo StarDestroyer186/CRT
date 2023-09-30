@@ -221,11 +221,11 @@ ul.nav { width:100%; margin:0 auto; padding:0; list-style:none; background-color
  { position: absolute; width: 100%; bottom: 45px; top: 35px; margin: auto 0px; overflow-y: auto; border: 1px solid #DDDDDD; border-top: none; }
 
 /*tabbar*/
-ul.tabbar { background-color: #fff; margin:2px 0px; padding-left: 0px; padding-bottom: 10px; border-bottom: 1px solid #DDDDDD; display:flex;}
-ul.tabbar li { list-style: none; margin: auto; width:100%;  align-content: space-between;}
-ul.tabbar li a { padding:10px 18px; height: 30px; font-size:12px; font-weight: normal; border: none; background: #fff; text-decoration: none; }
+ul.tabbar { background-color: #fff; margin:2px 0px; padding-left: 0px; padding-bottom: 0px;padding: 7px 0px; border-bottom: 1px solid #DDDDDD; display:flex;}
+ul.tabbar li { list-style: none; margin: auto; width:100%;  align-content: space-between;text-align: center;}
+ul.tabbar li a { height: 30px; font-size:12px; font-weight: normal; border: none; background: #fff; text-decoration: none; }
 ul.tabbar li a:visited { color: #000; } 
-ul.tabbar li.tab_active a { background-color: #5BC872; color: #000; border: 1px solid #DDDDDD; border-bottom: none; }
+ul.tabbar li.tab_active a { background-color: #5BC872; color: #000; border: 1px solid #DDDDDD; border-bottom: none;padding:10px 15px }
 
 
 /*tree grid*/
@@ -255,7 +255,7 @@ ul.tabbar li.tab_active a { background-color: #5BC872; color: #000; border: 1px 
 .tree_table tr.active { background-color: #DDDDDD; padding: 0 2px; font-weight: normal; }
 .tree_table tr.hover { background-color: #DDDDDD; padding: 0 2px; font-weight: normal; }
 .tree_table .end_state td ul { display:flex;float:center; justify-content:center; align-items:center; list-style: none; }
-.tree_table .end_state td ul li { float:center; }
+.tree_table .end_state td ul li { float:center;}
 .tree_table .end_state .temp_1  { transform: scale(2); background: url("../../img/state_temp.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
 .tree_table .end_state .fuel_1  { transform: scale(2); background: url("../../img/state_fuel.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
 .tree_table .end_state .mil_24  { transform: scale(2); background: url("../../img/state_route.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
@@ -322,9 +322,13 @@ ul.tabbar li.tab_active a { background-color: #5BC872; color: #000; border: 1px 
 .page_events .title-block i { position: absolute; top: 11px; left: 15px; width: 25px; height: 25px;  background: transparent url("../mimg/page.svg") no-repeat 0 center; cursor: pointer; }
 #events { position: absolute; left: 15px; right: 15px; top: 55px; bottom: 1px; }
 #event-table-div { position: absolute; top: 5px; bottom: 60px; right: 0px; overflow-y:scroll; }
-#events #event-table td { height: 25px; width: 50%; vertical-align: middle; text-align: left; padding-left: 10px; background-color: #FFFFFF; border-top: 1px solid #DDDDDD; }
+#events #event-table td { height: 25px; width: 50%; vertical-align: middle; text-align: left; padding-left: 10px;}
 .page_events #event-back { position: absolute; bottom: 18px; right: 0px; }
-
+.event-table-body{
+    background: #EEFFFF;
+    border: 1px solid #DDEEEE;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 /*#################################################*/
 /* DASHBOARD PANEL
 /*#################################################*/

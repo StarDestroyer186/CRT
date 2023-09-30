@@ -499,7 +499,7 @@ function loadEventInfo(keyid, toastShow){
 				for(var i=0; i<json.length; i++){
 					var jo = json[i];
 					var $tbody = $("<div class='event-table-body'></div>").appendTo($("#event-table"));
-					var $tr = $("<div></div>").appendTo($tbody);
+					var $tr = $("<div style='display: flex;justify-content: space-between;'></div>").appendTo($tbody);
 					var $td_time = $("<div></div>").text($.format.date(jo.t, JS_DEFAULT_DATETIME_fmt_JS)).appendTo($tr);
 					var $td_object = $("<div></div>").text(jo.c).appendTo($tr);
 					var $td_event = $("<div></div>").text(jo.a).appendTo($tr);

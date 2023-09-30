@@ -14,7 +14,8 @@ ul { list-style:none; }
 .enable { color: #000; cursor: pointer; background: #DDE; border: 1px solid #369; }
 .disable { color: #999; cursor: default; background: #ccc; border: 1px solid #999; }
 #dlg_loading #tips { display: block; padding: 20px 10px 20px 80px; line-height: 20px; background: #fff url("../../img/loading.svg") no-repeat 40px;  background-size : 30px 30px; }
-.invalidbox { background-color: red; }
+.invalidbox {   background-color: #FEE;
+  border: 1px solid #EDD; }
 .modalmask { position: fixed; bottom: 0; right: 0; top: 0; left: 0; display: block; background: #999; filter:alpha(opacity=40); opacity:0.4; z-index: 2; }
 .dialog { position: absolute; display: none; font-size: 100%; z-index: 3; }
 .dialog .out { background: #999; margin: 5px 0px 0px 5px; }
@@ -282,7 +283,7 @@ ul.tabbar li.tab_active a { background-color: #5BC872; color: #000; border: 1px 
 /* HISTORY PANEL
 /*#################################################*/
 .page_history { position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; z-index: 1; }
-.page_history table{ width:90%; table-layout:fixed; }
+.page_history table{ width:100%; table-layout:fixed; }
 .page_history .page-title { box-sizing: border-box; margin-bottom: 15px; font-size: 18px; line-height: 50px; padding: 0 50px; height: 50px; display: table; width: 100%; color: #ffffff; background-color: #2b82d4; }
 .page_history  .title-block i { position: absolute; top: 11px; left: 15px; width: 25px; height: 25px;  background: transparent url("../mimg/page.svg") no-repeat 0 center; cursor: pointer; }
 .page_history .ilabel {width:90%; display:block; margin: 5px 10px; height: 29px; font-size: 15px; line-height: 25px; color: #44484D; }
@@ -291,15 +292,15 @@ ul.tabbar li.tab_active a { background-color: #5BC872; color: #000; border: 1px 
 #page_history .input-group{ width:90%; margin-left: 10px;  }
 #page_history .input-group-addon { background: #EEEEEE url("../mimg/calendar.svg") no-repeat center center; cursor: pointer; background-size : 18px 18px; }
 #page_history .input-group input{ font-size: 12px; padding-left: 18x; padding-right: 0px; }
-.page_history_setting{ position: fixed; top: 51px; bottom: 0px; overflow-y:scroll; border: none;background-color:white; }
+.page_history_setting{ position: fixed; top: 51px; bottom: 0px; overflow-y:scroll; border: none;background-color:white;padding:10px }
 .page_history_setting table{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    margin: 20px 20px;
+/*    margin: 20px 20px;*/
 }
 /*#################################################*/
 /* CONTROL PANEL
 /*#################################################*/
-.page_cmd { position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; z-index: 1; }
+.page_cmd { position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; z-index: 1;background-color:white; }
 .page_cmd table{ width:100%; table-layout:fixed; overflow-y:scroll; }
 .page_cmd #cmdparam{ width:100%; max-height: 80px; overflow-y:scroll; top: 10px; }
 .page_cmd .page-title { box-sizing: border-box; margin-bottom: 15px; font-size: 18px; line-height: 50px; padding: 0 50px; height: 50px; display: table; width: 100%; color: #ffffff; background-color: #2b82d4; }

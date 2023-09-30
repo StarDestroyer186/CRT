@@ -233,7 +233,8 @@ JS_DEFAULT_DATE_FMT="<?php echo $_SESSION['date_fmt_js']?>";
 JS_DEFAULT_SOUND_ALARM = "<?php echo $_SESSION['sond_alarm']?>";
 JS_DEFAULT_POPUP_ALARM = "<?php echo $_SESSION['popup_alarm']?>";
 JS_UNIT_DISTANCE = "<?php echo $_SESSION['unit_distance']?>";         //0:Kilometer(公里) 1:Mile(英里) 2:Nautical mile(海里)
-JS_UNIT_FUEL = "<?php echo $_SESSION['unit_fuel']?>";                 //0:Liter(升) 1:Gallon(加仑)
+JS_UNIT_FUEL = "<?php echo $_SESSION['unit_fuel']?>";
+console.log(JS_UNIT_FUEL);                 //0:Liter(升) 1:Gallon(加仑)
 JS_UNIT_TEMPERATURE = "<?php echo $_SESSION['unit_temperature']?>";   //0:Celsius  1:Fahrenheit
 JS_UNIT_SPEED = "<?php echo $_SESSION['unit_speed']?>";               //0:kph(公里/小时) 1:mph(英里/小时)
 JS_UNIT_ALTITUDE = "<?php echo $_SESSION['unit_altitude']?>";         //0:meter 1:feet

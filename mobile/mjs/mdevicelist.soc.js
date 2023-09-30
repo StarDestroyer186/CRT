@@ -269,7 +269,7 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
 		$("<li style='width: "+stateLength*0.2+"px;' id='engine_time_24'></li>").appendTo($ul);
 		$("<li style='width: "+stateLength*0.197+"px;' id='total_mil'></li>").appendTo($ul);
 		$("<li style='width: "+stateLength*0.205+"px;' id='door_state'></li>").appendTo($ul);
-		$("<li id='last_driver'></li>").appendTo($td);
+		$("<li id='last_driver'></li>").appendTo($ul);
     }else{
         //update status
 		var alarmlast = $KI.find("td:eq(6)").attr("a");

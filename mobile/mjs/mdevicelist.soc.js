@@ -163,223 +163,296 @@ var ChangeItems = new Array();
  *   drawicon
  *   if current = n then locate
  **/
-function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v, a, ic, ar, p, map, st, io, dt, s, jb, dn, ex) { 
-	zt = t;
-	t = (t == null || t.length == 0) ? t : $.format.date(t, JS_DEFAULT_DATETIME_fmt_JS);
-	ts = (ts == null || ts.length == 0) ? ts : $.format.date(ts, JS_DEFAULT_DATETIME_fmt_JS);
-	var show = needShowAllAsset == 1;
-	var $tbody;
-    var $tr;
-    //update group
+function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v, a, ic, ar, p, map, st, io, dt, s, jb, dn, ex) {
+    t = t ? $.format.date(t, JS_DEFAULT_DATETIME_fmt_JS) : t;
+    ts = ts ? $.format.date(ts, JS_DEFAULT_DATETIME_fmt_JS) : ts;
+    
+    var show = needShowAllAsset === 1;
+    
+    // Create or update group
     var tgkey = tid + "_" + gid;
     var $KG = Groups[tgkey];
-    if(!$KG){
-        $tbody = $("<tbody></tbody>").appendTo("#" + tid);
-        $tr = $("<tr class='a'></tr>").attr("g", gid).attr("t", gtxt).appendTo($tbody);
-		
-        $KG = $tr;
-		$("<th style='background-color: #fff;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='showall'></input></th>").attr("title",JS_SHOW_ALL).appendTo($tr).find("input").prop('checked', show).css({opacity: show ? 1.0 : 0.5});
-		$("<th style='background-color: #fff;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='trackall'></input></th>").attr("title",JS_TRACK_ALL).appendTo($tr);
-        $g = $("<th style='word-wrap:break-word;word-break:break-all;'></th>").text(gtxt).attr("colspan", "8");
-        if(JS_DEFAULT_COLLAPSED == 0){
-			$g.addClass("group open").appendTo($tr);
-		}else{
-			$g.addClass("group close").appendTo($tr)
-		}
-		Groups[tgkey] = $KG
-    }else{
-        if($KG.attr("t") != gtxt){
+    if (!$KG) {
+        var $tbody = $("<tbody></tbody>").appendTo("#" + tid);
+        $KG = $("<tr class='a'></tr>")
+            .attr("g", gid)
+            .attr("t", gtxt)
+            .appendTo($tbody);
+
+        $("<th style='background-color: #fff;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='showall'></input></th>")
+            .attr("title", JS_SHOW_ALL)
+            .appendTo($KG)
+            .find("input")
+            .prop('checked', show)
+            .css({ opacity: show ? 1.0 : 0.5 });
+
+        $("<th style='background-color: #fff;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='trackall'></input></th>")
+            .attr("title", JS_TRACK_ALL)
+            .appendTo($KG);
+
+        var $g = $("<th style='word-wrap:break-word;word-break:break-all;'></th>")
+            .text(gtxt)
+            .attr("colspan", "8")
+            .addClass(JS_DEFAULT_COLLAPSED === 0 ? "group open" : "group close")
+            .appendTo($KG);
+
+        Groups[tgkey] = $KG;
+    } else {
+        if ($KG.attr("t") != gtxt) {
             $KG.attr("t", gtxt);
             $KG.children().eq(0).text(gtxt);
         }
-        $tbody = $KG.parent();
     }
-    //update group item
+
+    // Create or update group item
     var tvkey = tid + "_" + n;
     var $KI = GroupItem[tvkey];
-    if(!$KI){
-        $tr = $("<tr></tr>").attr("g", gid).attr("s", p.sta).attr("n", n).attr("i", i).attr("sval",p.val).attr("st", st).attr("ic", ic).attr("ar", ar).appendTo($tbody);
-        $KI = $tr;		
-		var track = false;
-		if(tid != "tree_all"){
-            var $keyitem = GroupItem["tree_all" + "_" + n]
-			if($keyitem){
-				show = $keyitem.find("td:eq(0) input").is(':checked');
-				track = $keyitem.find("td:eq(1) input").is(':checked');
-			}			
-		}
-		$("<td><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox'></input></td>").attr("n", n).attr("title",JS_SHOW).appendTo($tr).find("input").prop('checked', show);
-		$("<td><input style='margin: 0px 4px; height: 16px; width: 16px;;' type='checkbox'></input></td>").attr("n", n).attr("title",JS_TRACK).appendTo($tr).find("input").prop('checked', track);
-        $("<td style='word-wrap:break-word;word-break:break-all;'></td>").attr("c", c).attr("x", x).attr("y", y).attr("sp", s).attr("d", d).attr("i", i).attr("t", t).attr("dn", dn).attr("dt", dt).attr("io", io).attr("zt", zt).attr("ex", ex).html(c + "<br/><span style='font-size:12px; color:#808080; white-space: nowrap;'>"+t+"</span>").appendTo($tr);
-        $("<td></td>").text(p.tip).attr('tip',p.tip).appendTo($tr);
-		$("<td></td>").appendTo($tr);
-		$("<td></td>").attr("v", v).appendTo($tr);
-		$("<td></td>").attr("a", a).appendTo($tr);
-		$("<td></td>").attr("takn", getIdValue("5A:", io, true)).appendTo($tr);
-		$("<td></td>").attr("takp", getIdValue("5B:", io, true)).appendTo($tr);
-		$("<td></td>").appendTo($tr);              
-        GroupItem[tid + "_" + n] = $KI;		
-		//play sound
-		if(a > 0 && JS_DEFAULT_SOUND_ALARM == 1){
-			playAlarm();
-		}
-		//toast alarm
-		if(tid == 'tree_all' && a > 0 && JS_DEFAULT_POPUP_ALARM == 1){
-			var point = {
-				n: n,
-				c: c, 
-				nc: nc,
-				si: si,
-				v: v,
-				x: x, 
-				y: y, 
-				i: i, 
-				sta: p.sta, 
-				d: d, 
-				t: t, 
-				ts: ts, 
-				spd: p.spd, 
-				a: a, 
-				s: s, 
-				st: st, 
-				io: io, 
-				dt: dt, 
-				jb: jb, 
-				dn: dn
-			};
-			loadEventInfo(n, point);
-		}
-		
-		//end state
-		$tr = $("<tr class='end_state'></tr>").insertAfter($KI);
-		$("<td><div class='cpntainer'>hello  everynyan</div></td>").text('').appendTo($tr);
-		$("<td></td>").text('').appendTo($tr);
-		$td = $("<td colspan=8></td>").appendTo($tr);
-		$ul = $("<ul style='list-style: none;'></ul>");
-		$ul.appendTo($td);
-		
-		var stateLength = $(window).width() - 15 - 15 - 32 - 32;
-		$("<li style='width: "+stateLength*0.2+"px;' id='temp_1'></li>").appendTo($ul);
-		$("<li style='width: "+stateLength*0.2+"px;' id='fuel_1'></li>").appendTo($ul);
-		$("<li style='width: "+stateLength*0.2+"px; cursor:pointer;' id='mil_24'></li>").appendTo($ul); 
-		$("<li style='width: "+stateLength*0.2+"px;' id='max_speed_24'></li>").appendTo($ul);
-		$("<li style='width: "+stateLength*0.197+"px;' id='moving_time_24'></li>").appendTo($ul); 
-		$("<li style='width: "+stateLength*0.2+"px;' id='idle_time_24'></li>").appendTo($ul);
-		$("<li style='width: "+stateLength*0.2+"px;' id='stop_time_24'></li>").appendTo($ul);
-		$("<li style='width: "+stateLength*0.2+"px;' id='engine_time_24'></li>").appendTo($ul);
-		$("<li style='width: "+stateLength*0.197+"px;' id='total_mil'></li>").appendTo($ul);
-		$("<li style='width: "+stateLength*0.205+"px;' id='door_state'></li>").appendTo($ul);
-		$("<li id='last_driver'></li>").appendTo($td);
-    }else{
-        //update status
-		var alarmlast = $KI.find("td:eq(6)").attr("a");
-        $KI.attr("s", p.sta).attr("n", n).attr("i", i).attr("sval",p.val).attr("st", st).attr("ic", ic).attr("ar", ar);
+    if (!$KI) {
+        var $tr = $("<tr></tr>")
+            .attr("g", gid)
+            .attr("s", p.sta)
+            .attr("n", n)
+            .attr("i", i)
+            .attr("sval", p.val)
+            .attr("st", st)
+            .attr("ic", ic)
+            .attr("ar", ar)
+            .appendTo($KG);
+
+        var track = false;
+        if (tid !== "tree_all") {
+            var $keyitem = GroupItem["tree_all" + "_" + n];
+            if ($keyitem) {
+                show = $keyitem.find("td:eq(0) input").is(':checked');
+                track = $keyitem.find("td:eq(1) input").is(':checked');
+            }
+        }
+
+        $("<td><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox'></input></td>")
+            .attr("n", n)
+            .attr("title", JS_SHOW)
+            .appendTo($tr)
+            .find("input")
+            .prop('checked', show);
+
+        $("<td><input style='margin: 0px 4px; height: 16px; width: 16px;;' type='checkbox'></input></td>")
+            .attr("n", n)
+            .attr("title", JS_TRACK)
+            .appendTo($tr)
+            .find("input")
+            .prop('checked', track);
+
+        $("<td style='word-wrap:break-word;word-break:break-all;'></td>")
+            .attr("c", c)
+            .attr("x", x)
+            .attr("y", y)
+            .attr("sp", s)
+            .attr("d", d)
+            .attr("i", i)
+            .attr("t", t)
+            .attr("dn", dn)
+            .attr("dt", dt)
+            .attr("io", io)
+            .attr("zt", zt)
+            .attr("ex", ex)
+            .html(c + "<br/><span style='font-size:12px; color:#808080; white-space: nowrap;'>" + t + "</span>")
+            .appendTo($tr);
+
+        $("<td></td>").text(p.tip).attr('tip', p.tip).appendTo($tr);
+        $("<td></td>").appendTo($tr);
+        $("<td></td>").attr("v", v).appendTo($tr);
+        $("<td></td>").attr("a", a).appendTo($tr);
+        $("<td></td>").attr("takn", getIdValue("5A:", io, true)).appendTo($tr);
+        $("<td></td>").attr("takp", getIdValue("5B:", io, true)).appendTo($tr);
+
+        GroupItem[tid + "_" + n] = $KI;
+
+        // Play sound
+        if (a > 0 && JS_DEFAULT_SOUND_ALARM === 1) {
+            playAlarm();
+        }
+
+        // Toast alarm
+        if (tid === 'tree_all' && a > 0 && JS_DEFAULT_POPUP_ALARM === 1) {
+            var point = {
+                n: n,
+                c: c,
+                nc: nc,
+                si: si,
+                v: v,
+                x: x,
+                y: y,
+                i: i,
+                sta: p.sta,
+                d: d,
+                t: t,
+                ts: ts,
+                spd: p.spd,
+                a: a,
+                s: s,
+                st: st,
+                io: io,
+                dt: dt,
+                jb: jb,
+                dn: dn
+            };
+            loadEventInfo(n, point);
+        }
+
+        // End state
+        $tr = $("<tr class='end_state'></tr>").insertAfter($KI);
+        $("<td></td>").text('').appendTo($tr);
+        $("<td></td>").text('').appendTo($tr);
+        var $td = $("<td colspan=8></td>").appendTo($tr);
+        var $ul = $("<ul style='list-style: none;'></ul>").appendTo($td);
+
+        var stateLength = $(window).width() - 15 - 15 - 32 - 32;
+        $("<li style='width: " + stateLength * 0.2 + "px;' id='temp_1'></li>").appendTo($ul);
+        $("<li style='width: " + stateLength * 0.2 + "px;' id='fuel_1'></li>").appendTo($ul);
+        $("<li style='width: " + stateLength * 0.2 + "px; cursor:pointer;' id='mil_24'></li>").appendTo($ul);
+        $("<li style='width: " + stateLength * 0.2 + "px;' id='max_speed_24'></li>").appendTo($ul);
+        $("<li style='width: " + stateLength * 0.197 + "px;' id='moving_time_24'></li>").appendTo($ul);
+        $("<li style='width: " + stateLength * 0.2 + "px;' id='idle_time_24'></li>").appendTo($ul);
+        $("<li style='width: " + stateLength * 0.2 + "px;' id='stop_time_24'></li>").appendTo($ul);
+        $("<li style='width: " + stateLength * 0.2 + "px;' id='engine_time_24'></li>").appendTo($ul);
+        $("<li style='width: " + stateLength * 0.197 + "px;' id='total_mil'></li>").appendTo($ul);
+        $("<li style='width: " + stateLength * 0.205 + "px;' id='door_state'></li>").appendTo($ul);
+        $("<li id='last_driver'></li>").appendTo($td);
+    } else {
+        // Update status
+        var alarmlast = $KI.find("td:eq(6)").attr("a");
+        $KI.attr("s", p.sta)
+            .attr("n", n)
+            .attr("i", i)
+            .attr("sval", p.val)
+            .attr("st", st)
+            .attr("ic", ic)
+            .attr("ar", ar);
+
         var $child = $KI.children();
-        $child.eq(2).attr("c", c).attr("x", x).attr("y", y).attr("sp", s).attr("d", d).attr("i", i).attr("t", t).attr("dn", dn).attr("dt", dt).attr("io", io).attr("zt", zt).attr("ex", ex).html(c + "<br/><span style='font-size:12px; color:#808080; white-space: nowrap;'>"+t+"</span>");
-        $child.eq(3).text(p.tip).attr('tip',p.tip);
+        $child.eq(2)
+            .attr("c", c)
+            .attr("x", x)
+            .attr("y", y)
+            .attr("sp", s)
+            .attr("d", d)
+            .attr("i", i)
+            .attr("t", t)
+            .attr("dn", dn)
+            .attr("dt", dt)
+            .attr("io", io)
+            .attr("zt", zt)
+            .attr("ex", ex)
+            .html(c + "<br/><span style='font-size:12px; color:#808080; white-space: nowrap;'>" + t + "</span>");
+
+        $child.eq(3).text(p.tip).attr('tip', p.tip);
         $child.eq(5).attr("v", v);
         $child.eq(6).attr("a", a);
-		$child.eq(7).attr("takn", getIdValue("5A:", io, true));
-		$child.eq(8).attr("takp", getIdValue("5B:", io, true));
-        //group changed
-        if($KI.attr("g") != gid){
+        $child.eq(7).attr("takn", getIdValue("5A:", io, true));
+        $child.eq(8).attr("takp", getIdValue("5B:", io, true));
+
+        // Group changed
+        if ($KI.attr("g") != gid) {
             $KI.attr("g", gid);
             var $p = $KI.parent();
-			$KI.next().remove();
+            $KI.next().remove();
             $KI.remove();
-            if($p.children().length == 1){
+            if ($p.children().length === 1) {
                 var g = $p.children().eq(0).attr("g");
                 $p.remove();
                 delete Groups[tid + "_" + g];
-            }  
+            }
             $KI.appendTo($tbody);
-			//end state
-			$tr = $("<tr class='end_state'></tr>").insertAfter($KI);
-			$("<td></td>").text('').appendTo($tr);
-			$("<td></td>").text('').appendTo($tr);
-			$td = $("<td colspan=8></td>").appendTo($tr);
-			$("<ul style='list-style: none;'></ul>").appendTo($td);
-			
-			var stateLength = $(window).width() - 15 - 15 - 32 - 32;
-			$("<li style='width: "+stateLength*0.2+"px;' id='temp_1'></li>").appendTo($td);
-			$("<li style='width: "+stateLength*0.2+"px;' id='fuel_1'></li>").appendTo($td);
-			$("<li style='width: "+stateLength*0.2+"px; cursor:pointer;' id='mil_24'></li>").appendTo($td); 
-			$("<li style='width: "+stateLength*0.2+"px;' id='max_speed_24'></li>").appendTo($td);
-			$("<li style='width: "+stateLength*0.197+"px;' id='moving_time_24'></li>").appendTo($td); 
-			$("<li style='width: "+stateLength*0.2+"px;' id='idle_time_24'></li>").appendTo($td);
-			$("<li style='width: "+stateLength*0.2+"px;' id='stop_time_24'></li>").appendTo($td);
-			$("<li style='width: "+stateLength*0.2+"px;' id='engine_time_24'></li>").appendTo($td);
-			$("<li style='width: "+stateLength*0.197+"px;' id='total_mil'></li>").appendTo($td);
-			$("<li style='width: "+stateLength*0.205+"px;' id='door_state'></li>").appendTo($td);
-			$("<li id='last_driver'></li>").appendTo($td);
-        } 	
-		
-		if(selid == n){
-			needloc = true;
-		}
-		//play sound
-		if(a > alarmlast && JS_DEFAULT_SOUND_ALARM == 1){
-			playAlarm();
-		}
-		
-		//toast alarm
-		if(tid == 'tree_all' && a > alarmlast && JS_DEFAULT_POPUP_ALARM == 1){
-			var point = {
-				n: n,
-				c: c, 
-				nc: nc,
-				si: si,
-				v: v,
-				x: x, 
-				y: y, 
-				i: i, 
-				sta: p.sta, 
-				d: d, 
-				t: t, 
-				ts: ts, 
-				spd: p.spd, 
-				a: a, 
-				s: s, 
-				st: st, 
-				io: io, 
-				dt: dt, 
-				jb: jb, 
-				dn: dn
-			};
-			loadEventInfo(n, point);
-		}
+
+            // End state
+            $tr = $("<tr class='end_state'></tr>").insertAfter($KI);
+            $("<td></td>").text('').appendTo($tr);
+            $("<td></td>").text('').appendTo($tr);
+            var $td = $("<td colspan=8></td>").appendTo($tr);
+            var $ul = $("<ul style='list-style: none;'></ul>").appendTo($td);
+
+            var stateLength = $(window).width() - 15 - 15 - 32 - 32;
+            $("<li style='width: " + stateLength * 0.2 + "px;' id='temp_1'></li>").appendTo($ul);
+            $("<li style='width: " + stateLength * 0.2 + "px;' id='fuel_1'></li>").appendTo($ul);
+            $("<li style='width: " + stateLength * 0.2 + "px; cursor:pointer;' id='mil_24'></li>").appendTo($ul);
+            $("<li style='width: " + stateLength * 0.2 + "px;' id='max_speed_24'></li>").appendTo($ul);
+            $("<li style='width: " + stateLength * 0.197 + "px;' id='moving_time_24'></li>").appendTo($ul);
+            $("<li style='width: " + stateLength * 0.2 + "px;' id='idle_time_24'></li>").appendTo($ul);
+            $("<li style='width: " + stateLength * 0.2 + "px;' id='stop_time_24'></li>").appendTo($ul);
+            $("<li style='width: " + stateLength * 0.2 + "px;' id='engine_time_24'></li>").appendTo($ul);
+            $("<li style='width: " + stateLength * 0.197 + "px;' id='total_mil'></li>").appendTo($ul);
+            $("<li style='width: " + stateLength * 0.205 + "px;' id='door_state'></li>").appendTo($ul);
+            $("<li id='last_driver'></li>").appendTo($td);
+        }
+
+        if (selid == n) {
+            needloc = true;
+        }
+
+        // Play sound
+        if (a > alarmlast && JS_DEFAULT_SOUND_ALARM === 1) {
+            playAlarm();
+        }
+
+        // Toast alarm
+        if (tid == 'tree_all' && a > alarmlast && JS_DEFAULT_POPUP_ALARM === 1) {
+            var point = {
+                n: n,
+                c: c,
+                nc: nc,
+                si: si,
+                v: v,
+                x: x,
+                y: y,
+                i: i,
+                sta: p.sta,
+                d: d,
+                t: t,
+                ts: ts,
+                spd: p.spd,
+                a: a,
+                s: s,
+                st: st,
+                io: io,
+                dt: dt,
+                jb: jb,
+                dn: dn
+            };
+            loadEventInfo(n, point);
+        }
     }
-	if ($KI.parent().children().eq(0).find("th:eq(2)").hasClass("open")) {
-		$KI.show();
-		$KI.next().show();
-	}else{
-		$KI.hide();
-		$KI.next().hide();
-	}
-	
-    if(map && selid == n){
+
+    if ($KI.parent().children().eq(0).find("th:eq(2)").hasClass("open")) {
+        $KI.show();
+        $KI.next().show();
+    } else {
+        $KI.hide();
+        $KI.next().hide();
+    }
+
+    if (map && selid == n) {
         $KI.addClass("active");
-		$KI.next().addClass("active");
+        $KI.next().addClass("active");
     }
     ChangeItems.push($KI);
+
     if (map) {
         try {
-            /*TODO: add speed,if s>0 then updateicon*/
-			//alert(c+","+st);
-			if(historyid != n){
-				map.DrawIcon(n, c, nc, si, v, x, y, i, p.sta, d, t, ts, p.spd, a, false, s, st, io, dt, jb, dn, ANIMATION_TIME);
-			}
-            if(show && !historymode){
-				map.HideShowMarker(true,n);
-			}
+            if (historyid != n) {
+                map.DrawIcon(n, c, nc, si, v, x, y, i, p.sta, d, t, ts, p.spd, a, false, s, st, io, dt, jb, dn, ANIMATION_TIME);
+            }
+            if (show && !historymode) {
+                map.HideShowMarker(true, n);
+            }
             if ($KI.find("td:eq(1) input").is(':checked') && historyid != n) {
                 map_locate(n, selid == n && !historymode, selid == n, true, false);
-            }else if($KI.find("td:eq(0) input").is(':checked') && selid == n && !historymode){
-				map_locate(n, true, false, false, false);
-			}			
-        } catch(e) {}
+            } else if ($KI.find("td:eq(0) input").is(':checked') && selid == n && !historymode) {
+                map_locate(n, true, false, false, false);
+            }
+        } catch (e) {}
     }
 }
+
 function findGroupItem(tid, vid){
     var tvkey = tid + "_" + vid;
     var $keyitem = GroupItem[tvkey];

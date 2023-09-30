@@ -49,7 +49,7 @@ ul { list-style:none; }
 .tooltip { position:absolute; padding: 5px; border: 1px solid gray; font-size: 9pt; font-family: Arial, Tahoma; background-color: #fff; z-index: 30; }
 .icon-button {
  background-color: #2B82D4 !important; width: 95%; border: none; color: white; padding: 7px 7px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer; border-radius: 4px; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); height: 35px; -webkit-appearance : none ;
-margin-bottom: 20px;
+/*margin-bottom: 20px;*/
 }
 .icon-button-back { padding-left: 20px; background: url(../mimg/arrow_left.svg) no-repeat center left; background-size : 15px 15px; vertical-align: top; -webkit-appearance : none; }
 

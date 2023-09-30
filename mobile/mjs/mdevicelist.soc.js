@@ -497,11 +497,11 @@ function loadEventInfo(keyid, toastShow){
 				$("#event-table").animate({scrollTop:0},0);
 				for(var i=0; i<json.length; i++){
 					var jo = json[i];
-					var $tbody = $("<tbody class='event-table-body'></tbody>").appendTo($("#event-table"));
-					var $tr = $("<tr></tr>").appendTo($tbody);
-					var $td_time = $("<td></td>").text($.format.date(jo.t, JS_DEFAULT_DATETIME_fmt_JS)).appendTo($tr);
-					var $td_object = $("<td></td>").text(jo.c).appendTo($tr);
-					var $td_event = $("<td></td>").text(jo.a).appendTo($tr);
+					var $tbody = $("<div class='event-table-body'></div>").appendTo($("#event-table"));
+					var $tr = $("<div></div>").appendTo($tbody);
+					var $td_time = $("<div></div>").text($.format.date(jo.t, JS_DEFAULT_DATETIME_fmt_JS)).appendTo($tr);
+					var $td_object = $("<div></div>").text(jo.c).appendTo($tr);
+					var $td_event = $("<div></div>").text(jo.a).appendTo($tr);
 				}
 			}else{
 				var json = eval('(' + data + ')');

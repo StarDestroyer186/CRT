@@ -1582,7 +1582,6 @@ function showAllObj(isShow){
 	$.each($trs, function(idx, value){
 		if(isShow){			
 			$(value).find("td:first-child input").prop('checked', true);
-			
 		}else{
 			map.ClearTrack();
 			$(value).find("td:first-child input").prop('checked', false);

@@ -254,16 +254,16 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
 		$tr = $("<tr class='end_state'></tr>").insertAfter($KI);
 
 		$td = $("<td colspan=8></td>").appendTo($tr);
-		$ul = $("<div style='list-style: none;'></div>");
+		$ul = $("<div style='list-style: none; display:flex;'></div>");
 		$ul.appendTo($td);
 		
 		var stateLength = $(window).width() - 15 - 15 - 32 - 32;
-		$("<div style='width: "+stateLength*0.2+"px;' id='temp_1'></div>").appendTo($ul);
+		$("<div class='w-1/2'><div style='width: "+stateLength*0.2+"px;' id='temp_1'></div>").appendTo($ul);
 		$("<div style='width: "+stateLength*0.2+"px;' id='temp_1'></div>").appendTo($ul);
 		$("<div style='width: "+stateLength*0.2+"px;' id='fuel_1'></div>").appendTo($ul);
 		$("<div style='width: "+stateLength*0.2+"px; cursor:pointer;' id='mil_24'></div>").appendTo($ul); 
 		$("<div style='width: "+stateLength*0.2+"px;' id='max_speed_24'></div>").appendTo($ul);
-		$("<div style='width: "+stateLength*0.197+"px;' id='moving_time_24'></div>").appendTo($ul); 
+		$("<div style='width: "+stateLength*0.197+"px;' id='moving_time_24'></div></div>").appendTo($ul); 
 		$("<div style='width: "+stateLength*0.2+"px;' id='idle_time_24'></div>").appendTo($ul);
 		$("<div style='width: "+stateLength*0.2+"px;' id='stop_time_24'></div>").appendTo($ul);
 		$("<div style='width: "+stateLength*0.2+"px;' id='engine_time_24'></div>").appendTo($ul);

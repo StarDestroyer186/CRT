@@ -522,8 +522,7 @@ function getInfoByJson($ioparams, $sensorParams, $data){
             }
         }
     }
-	print_r($result);
-	die;
+	
     $json = array2json($result);
     return $json;
 }

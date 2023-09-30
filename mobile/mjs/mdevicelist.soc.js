@@ -210,7 +210,7 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
 		}
 		$("<td><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox'></input></td>").attr("n", n).attr("title",JS_SHOW).appendTo($tr).find("input").prop('checked', show);
 		$("<td><input style='margin: 0px 4px; height: 16px; width: 16px;;' type='checkbox'></input></td>").attr("n", n).attr("title",JS_TRACK).appendTo($tr).find("input").prop('checked', track);
-        $("<td style='word-wrap:break-word;word-break:break-all;'></td>").attr("c", c).attr("x", x).attr("y", y).attr("sp", s).attr("d", d).attr("i", i).attr("t", t).attr("dn", dn).attr("dt", dt).attr("io", io).attr("zt", zt).attr("ex", ex).html(c + "<br/><span style='font-size:12px; color:#808080; white-space: nowrap;'>"+c+"</span>").appendTo($tr);
+        $("<td style='word-wrap:break-word;word-break:break-all;'></td>").attr("c", c).attr("x", x).attr("y", y).attr("sp", s).attr("d", d).attr("i", i).attr("t", t).attr("dn", dn).attr("dt", dt).attr("io", io).attr("zt", zt).attr("ex", ex).html(c + "<br/><span style='font-size:12px; color:#808080; white-space: nowrap;'>"+zt+"</span>").appendTo($tr);
         $("<td></td>").text(p.tip).attr('tip',p.tip).appendTo($tr);
 		$("<td></td>").appendTo($tr);
 		$("<td></td>").attr("v", v).appendTo($tr);

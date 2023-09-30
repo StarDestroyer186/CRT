@@ -174,7 +174,7 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
     var tgkey = tid + "_" + gid;
     var $KG = Groups[tgkey];
     if(!$KG){
-        $tbody = $("<tbody></tbody>").appendTo("#" + tid);
+        $tbody = $("<tbody class='info-card'></tbody>").appendTo("#" + tid);
         $tr = $("<tr class='a'></tr>").attr("g", gid).attr("t", gtxt).appendTo($tbody);
 		
         $KG = $tr;

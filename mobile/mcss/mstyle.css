@@ -366,3 +366,8 @@ ul.tabbar li.tab_active a { background-color: #5BC872; color: #000; border: 1px 
 .settings-items { position: absolute; width: 100%; bottom: 45px; top: 1px; margin: auto 0px; overflow-x:hidden; overflow-y: auto; border: 0px solid #DDDDDD; border-top: none; }
 .page_setting #setting-setting { position: absolute; bottom: 2px; left: 0px; width: 120px; }
 .page_setting #setting-back { position: absolute; bottom: 2px; right: 0px; width: 120px; }
+
+.info-card{
+    border-radius: 5px;
+    padding: 5%;
+}

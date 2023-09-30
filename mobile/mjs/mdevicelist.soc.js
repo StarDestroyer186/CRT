@@ -260,6 +260,7 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
 		
 		var stateLength = $(window).width() - 15 - 15 - 32 - 32;
 		$("<li style='width: "+stateLength*0.2+"px;' id='temp_1'></li>").appendTo($ul);
+		$("<li style='width: "+stateLength*0.2+"px;' id='temp_1'></li>").appendTo($ul);
 		$("<li style='width: "+stateLength*0.2+"px;' id='fuel_1'></li>").appendTo($ul);
 		$("<li style='width: "+stateLength*0.2+"px; cursor:pointer;' id='mil_24'></li>").appendTo($ul); 
 		$("<li style='width: "+stateLength*0.2+"px;' id='max_speed_24'></li>").appendTo($ul);

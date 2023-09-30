@@ -255,20 +255,21 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
 		$("<td></td>").text('').appendTo($tr);
 		$("<td></td>").text('').appendTo($tr);
 		$td = $("<td colspan=8></td>").appendTo($tr);
-		$("<ul style='list-style: none;'></ul>").appendTo($td);
+		$ul = $("<ul style='list-style: none;'></ul>");
+		$ul.appendTo($td);
 		
 		var stateLength = $(window).width() - 15 - 15 - 32 - 32;
-		$("<li style='width: "+stateLength*0.2+"px;' id='temp_1'></li>").appendTo($td);
-		$("<li style='width: "+stateLength*0.2+"px;' id='fuel_1'></li>").appendTo($td);
-		$("<li style='width: "+stateLength*0.2+"px; cursor:pointer;' id='mil_24'></li>").appendTo($td); 
-		$("<li style='width: "+stateLength*0.2+"px;' id='max_speed_24'></li>").appendTo($td);
-		$("<li style='width: "+stateLength*0.197+"px;' id='moving_time_24'></li>").appendTo($td); 
-		$("<li style='width: "+stateLength*0.2+"px;' id='idle_time_24'></li>").appendTo($td);
-		$("<li style='width: "+stateLength*0.2+"px;' id='stop_time_24'></li>").appendTo($td);
-		$("<li style='width: "+stateLength*0.2+"px;' id='engine_time_24'></li>").appendTo($td);
-		$("<li style='width: "+stateLength*0.197+"px;' id='total_mil'></li>").appendTo($td);
-		$("<li style='width: "+stateLength*0.205+"px;' id='door_state'></li>").appendTo($td);
-		$("<li id='last_driver'></li>").appendTo($td);
+		$("<li style='width: "+stateLength*0.2+"px;' id='temp_1'></li>").appendTo($ul);
+		$("<li style='width: "+stateLength*0.2+"px;' id='fuel_1'></li>").appendTo($ul);
+		$("<li style='width: "+stateLength*0.2+"px; cursor:pointer;' id='mil_24'></li>").appendTo($ul); 
+		$("<li style='width: "+stateLength*0.2+"px;' id='max_speed_24'></li>").appendTo($ul);
+		$("<li style='width: "+stateLength*0.197+"px;' id='moving_time_24'></li>").appendTo($ul); 
+		$("<li style='width: "+stateLength*0.2+"px;' id='idle_time_24'></li>").appendTo($ul);
+		$("<li style='width: "+stateLength*0.2+"px;' id='stop_time_24'></li>").appendTo($ul);
+		$("<li style='width: "+stateLength*0.2+"px;' id='engine_time_24'></li>").appendTo($ul);
+		$("<li style='width: "+stateLength*0.197+"px;' id='total_mil'></li>").appendTo($ul);
+		$("<li style='width: "+stateLength*0.205+"px;' id='door_state'></li>").appendTo($ul);
+		$("<li id='last_driver'></li>").appendTo($ul);
     }else{
         //update status
 		var alarmlast = $KI.find("td:eq(6)").attr("a");

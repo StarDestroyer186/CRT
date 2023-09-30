@@ -940,8 +940,8 @@ JS_DRAW_TOOL_TOOL_DISTANCE = "<?php echo $TEXT['js-draw-tool-distance']?>";
 		</div>
 		<div id="events">
 			<div id="event-table-div">
-				<table id="event-table" border="0" cellpadding="0" cellspacing="0">				
-				</table>
+				<div id="event-table">				
+				</div>
 			</div>			
 			<div id="event-back" ontouchmove="event.preventDefault();">			
 				<label type="button" class="icon-button" style="display: table-cell; vertical-align: middle; text-align: center;">

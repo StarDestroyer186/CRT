@@ -532,6 +532,8 @@ function getInfoByJson($ioparams, $sensorParams, $data){
                 $gtxt = $row['gtxt'];
                 array_splice($row, 0, 3);                
                 $result[$ncnt] = array('gid' => $gid, 'gtxt' => $gtxt, 'item' => array($row));
+				print_r($row);
+				die;
             } else {
                 array_splice($row, 0, 3);
                 array_push($result[$ncnt]['item'], $row);

@@ -504,22 +504,6 @@ function getInfoByJson($ioparams, $sensorParams, $data){
             $status = $row['e'];           
 			if($status != ''){
                 $row['e'] = "<br> " . $TEXT['navi-generalstatus'] .': '.getDeviceStatus($status);               
-				/*
-				if($row['on'] == 1){
-                    //0=ACC ON; 1=ACC OFF; 2=OTHER
-                    $over = filterSpeed($status);
-                    if($over > 0){
-                        if($over == 1){
-                            $row['s'] = 0;
-                        }else{
-                            $row['s'] = $row['s'] > 2 ? $row['s'] : 0;
-                        }
-                    }
-                }else{
-                    if($row['s'] >= 0){
-                        $row['s'] = 0;
-                    }
-                }*/
             }
             if($row['io'] != ''){
                 $pid = $row['pid'];
@@ -531,13 +515,15 @@ function getInfoByJson($ioparams, $sensorParams, $data){
                 $lastgid = $gid;
                 $gtxt = $row['gtxt'];
                 array_splice($row, 0, 3);                
-                $result[$ncnt] = array('gsid' => $gid, 'gtxt' => $gtxt, 'item' => array($row));
+                $result[$ncnt] = array('gid' => $gid, 'gtxt' => $gtxt, 'item' => array($row));
             } else {
                 array_splice($row, 0, 3);
                 array_push($result[$ncnt]['item'], $row);
             }
         }
     }
+	print_r($result);
+	die;
     $json = array2json($result);
     return $json;
 }

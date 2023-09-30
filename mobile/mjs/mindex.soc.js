@@ -519,7 +519,7 @@ function relocate(){
 			remain = JS_GLOBAL_MIM_UPDATE;
 			var objid = getShowObjs();
 			if(objid.length >= 0){							
-				$.post("../devstat.ajax.php?t=" + new Date().getTime(), {"objid": objid}, function(data){
+				$.post("../devstat.ajax.php?t=" + new Date().getTime(), {"objid": objid,"test":1}, function(data){
 					if(data != ""){
 						try{
 							if(data == "nologin"){

@@ -1,5 +1,5 @@
 <?php
-$TEXT['global-title'] = "Credence Trackerمنهاج";
+$TEXT['global-title'] = "7-24Telematics منهاج";
 $TEXT['global-copyright'] = "جميع الحقوق محفوظة © www.7-24Telematics.com جميع الحقوق محفوظة.";
 $TEXT['global-support'] = "دعم المتصفح IE7+,Firefox,Maxthon,Chrome";
 $TEXT['1000'] = "طبيعي, لا يوجد تحذيرات";

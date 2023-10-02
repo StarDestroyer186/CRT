@@ -1,6 +1,6 @@
 <?php
-$TEXT['global-title'] = "Credence Tracker";
-$TEXT['global-copyright'] = "Copyright &copy; www.credencetracker.com. All Rights Reserved.";
+$TEXT['global-title'] = "7-24Telematics Platforma";
+$TEXT['global-copyright'] = "Copyright &copy; www.7-24telematics.com. All Rights Reserved.";
 $TEXT['global-support'] = "Navegador de suporte para IE7+,Firefox,Maxthon,Chrome";
 $TEXT['1000'] = "Normalna praca, bez alarmu";
 $TEXT['1001'] = "Uprowadzenie, napad - alarm !";

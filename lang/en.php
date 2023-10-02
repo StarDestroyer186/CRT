@@ -1,5 +1,5 @@
 <?php
-$TEXT['global-title'] = "7-24Telematics Platform - Login -";
+$TEXT['global-title'] = "Credence Tracker App - Login -";
 $TEXT['global-copyright'] = "Copyright &copy; www.7-24telematics.com. All Rights Reserved.";
 $TEXT['global-support'] = "Support with Browser IE7+,Firefox,Maxthon,Chrome";
 $TEXT['1000'] = "Normal,No alarm";

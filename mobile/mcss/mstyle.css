@@ -48,16 +48,23 @@ ul { list-style:none; }
 .icon_stop { background: transparent url("../../img/icon_stop.png") no-repeat 16px; }
 .tooltip { position:absolute; padding: 5px; border: 1px solid gray; font-size: 9pt; font-family: Arial, Tahoma; background-color: #fff; z-index: 30; }
 .icon-button {
- background-color: #2B82D4 !important; width: 95%; border: none; color: white; padding: 7px 7px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer; border-radius: 4px; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); height: 35px; -webkit-appearance : none ;
-margin-bottom: 20px;
+ background-color: #666d80 !important; width: 95%; border: none; color: white; padding: 7px 7px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer; border-radius: 4px; height: 35px; -webkit-appearance : none ;
+/*margin-bottom: 20px;*/
 }
 .icon-button-back { padding-left: 20px; background: url(../mimg/arrow_left.svg) no-repeat center left; background-size : 15px 15px; vertical-align: top; -webkit-appearance : none; }
-
+#page_cmd_details{
+    height: 70%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin: 10px;
+}
+#page_cmd_params{
+    margin-top: 10px;
+}
 /*#################################################*/
 /* MENU PANEL
 /*#################################################*/
 .page_menu { display: block; position: absolute; top: 0px; left: 0px; bottom: 0px; width: 100%; height: 100%; color: #696969; z-index: 999999; box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.3); background: #f8f8f8; display: table; margin: auto; }
-.page_menu .page-title { box-sizing: border-box; margin-bottom: 15px; font-size: 18px; line-height: 50px; padding: 0 15px; height: 50px; display: table; width: 100%; color: #ffffff; background-color: #2b82d4; }
+.page_menu .page-title { box-sizing: border-box; margin-bottom: 15px; font-size: 18px; line-height: 50px; padding: 0 15px; height: 50px; display: table; width: 100%; color: #ffffff; background-color: #666d80; }
 .page_menu .title-block i { position: absolute; top: 15px; right: 15px; width: 15px; height: 15px; display: block; background: transparent url("../mimg/wndclose.svg") no-repeat 0 center; cursor: pointer; }
 .page_menu ul { padding: 0 15px 30px 0; margin: 0; display: table; width: 100%; list-style: none; }
 .page_menu ul li { width: 33.333%; float: left; padding-top: 15px; padding-left: 15px; box-sizing: border-box; }
@@ -96,7 +103,7 @@ margin-bottom: 20px;
 /* MAP PANEL
 /*#################################################*/
 .page_map { position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; z-index: 1; }
-.page_map .page-title { box-sizing: border-box; margin-bottom: 15px; font-size: 18px; line-height: 50px; padding: 0 50px; height: 50px; display: table; width: 100%; color: #ffffff; background-color: #2b82d4; }
+.page_map .page-title { box-sizing: border-box; margin-bottom: 15px; font-size: 18px; line-height: 50px; padding: 0 50px; height: 50px; display: table; width: 100%; color: #ffffff; background-color: #666d80; }
 .page_map  .title-block i { position: absolute; top: 11px; left: 15px; width: 25px; height: 25px;  background: transparent url("../mimg/page.svg") no-repeat 0 center; cursor: pointer; }
 #map { position: fixed; top: 50px; left: 0px; right: 0px; bottom: 0px; z-index: 1; }
 #loadmapwait { position: absolute; top: 1px; left: 40%; margin:0 auto; font-size: 120%; color: #ff6; font-weight: bold; cursor: default; background: #ccc url("../../img/ajax-loader.gif") no-repeat 4px center; padding: 1px 5px 1px 24px; z-index: 2;}
@@ -203,14 +210,14 @@ ul.nav { width:100%; margin:0 auto; padding:0; list-style:none; background-color
 /* OBJECTS PANEL
 /*#################################################*/
 .page_objects { position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; z-index: 1; }
-.page_objects .page-title { box-sizing: border-box; margin-bottom: 15px; font-size: 18px; line-height: 50px; padding: 0 50px; height: 50px; display: table; width: 100%; color: #ffffff; background-color: #2b82d4; }
+.page_objects .page-title { box-sizing: border-box; margin-bottom: 15px; font-size: 18px; line-height: 50px; padding-left: 50px; height: 50px; display: table; width: 100%; color: #ffffff; background-color: #666d80; }
 .page_objects  .title-block i { position: absolute; top: 11px; left: 15px; width: 25px; height: 25px;  background: transparent url("../mimg/page.svg") no-repeat 0 center; cursor: pointer; }
 #sch { position: absolute; top: 70px; height: 32px; left: 15px; right: 15px; background: #BCD0E7; z-index: 1; --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); }
 #sch #device { border: none; padding: 7px; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-right: 100px; height: 32px; outline-style: none; }  
 #sch #selone { 
-    background-color: #5BC872;
+    background-color: #666d80;
 /*    border: 1px solid #E8E8E8;*/
     padding: 7px;
     height: 32px;
@@ -219,6 +226,7 @@ ul.nav { width:100%; margin:0 auto; padding:0; list-style:none; background-color
     position: relative;
     top: -32px;
     -webkit-appearance: none;
+    color: white;
 }
 #mod { position: absolute; left: 15px; right: 15px; top: 120px; bottom: 1px; }
 .
@@ -229,7 +237,8 @@ ul.tabbar { background-color: #fff; margin:2px 0px; padding-left: 0px; padding-b
 ul.tabbar li { list-style: none; margin: auto; width:100%;  align-content: space-between;text-align: center;}
 ul.tabbar li a { height: 30px; font-size:12px; font-weight: normal; border: none; background: #fff; text-decoration: none; }
 ul.tabbar li a:visited { color: #000; } 
-ul.tabbar li.tab_active a { background-color: #5BC872; color: #000; border: 1px solid #DDDDDD; border-bottom: none;padding:10px 15px }
+ul.tabbar li.tab_active a { background-color: #666d80; color: white; border: 1px solid #DDDDDD; border-bottom: none;padding:10px 15px;border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
 
 
 /*tree grid*/
@@ -258,22 +267,39 @@ ul.tabbar li.tab_active a { background-color: #5BC872; color: #000; border: 1px 
 .tree_table tr.normal { color: #444444; }
 .tree_table tr.active { background-color: #DDDDDD; padding: 0 2px; font-weight: normal; }
 .tree_table tr.hover { background-color: #DDDDDD; padding: 0 2px; font-weight: normal; }
-.tree_table .end_state td ul { display:flex;float:center; justify-content:center; align-items:center; list-style: none; }
-.tree_table .end_state td ul li { float:center;}
-.tree_table .end_state .temp_1  { transform: scale(2); background: url("../../img/state_temp.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
-.tree_table .end_state .fuel_1  { transform: scale(2); background: url("../../img/state_fuel.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
-.tree_table .end_state .mil_24  { transform: scale(2); background: url("../../img/state_route.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
-.tree_table .end_state .max_speed_24  { transform: scale(2); background: url("../../img/state_max_speed.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
-.tree_table .end_state .moving_time_24  { transform: scale(2); background: url("../../img/moving_time_24.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 15px 15px; }
-.tree_table .end_state .idle_time_24  { transform: scale(2); background: url("../../img/idle_time_24.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 15px 15px; }
-.tree_table .end_state .stop_time_24  { transform: scale(2); background: url("../../img/stop_time_24.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 15px 15px; }
-.tree_table .end_state .engine_time_24  { transform: scale(2); background: url("../../img/engine_time_24.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 15px 15px; }
-.tree_table .end_state .total_mil  { transform: scale(2); background: url("../../img/odometer2.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
-.tree_table .end_state .last_driver  { transform: scale(2); background: url("../../img/steering_wheel_green.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
-.tree_table .end_state .door_state  { transform: scale(2); background: url("../../img/info_door.svg") no-repeat 0px center; margin:14px; padding-left: 18px; background-size : 13px 13px; }
+/*.tree_table .end_state td ul { display:flex; float:left; justify-content:space-evenly; align-items:center; list-style: none; }
+.tree_table .end_state td ul li { float:left;}*/
+.tree_table .end_state .temp_1  { transform: scale(1.25); background: url("../../img/state_temp.svg") no-repeat 0px center; margin:22px 0px; padding-left: 18px; background-size : 13px 13px; }
+.tree_table .end_state .fuel_1  { transform: scale(1.25); background: url("../../img/state_fuel.svg") no-repeat 0px center; margin:22px 0px; padding-left: 18px; background-size : 13px 13px; }
+.tree_table .end_state .mil_24  { transform: scale(1.25); background: url("../../img/state_route.svg") no-repeat 0px center; margin:22px 0px; padding-left: 18px; background-size : 13px 13px; }
+.tree_table .end_state .max_speed_24  { transform: scale(1.25); background: url("../../img/state_max_speed.svg") no-repeat 0px center; margin:22px 0px; padding-left: 18px; background-size : 13px 13px; }
+.tree_table .end_state .moving_time_24  { transform: scale(1.25); background: url("../../img/moving_time_24.svg") no-repeat 0px center; margin:22px 0px; padding-left: 18px; background-size : 15px 15px; }
+.tree_table .end_state .idle_time_24  { transform: scale(1.25); background: url("../../img/idle_time_24.svg") no-repeat 0px center; margin:22px 0px; padding-left: 18px; background-size : 15px 15px; }
+.tree_table .end_state .stop_time_24  { transform: scale(1.25); background: url("../../img/stop_time_24.svg") no-repeat 0px center; margin:22px 0px; padding-left: 18px; background-size : 15px 15px; }
+.tree_table .end_state .engine_time_24  { transform: scale(1.25); background: url("../../img/engine_time_24.svg") no-repeat 0px center; margin:22px 0px; padding-left: 18px; background-size : 15px 15px; }
+.tree_table .end_state .total_mil  { transform: scale(1.25); background: url("../../img/odometer2.svg") no-repeat 0px center; margin:22px 0px; padding-left: 18px; background-size : 13px 13px; }
+.tree_table .end_state .last_driver  { transform: scale(1.25); background: url("../../img/steering_wheel_green.svg") no-repeat 0px center; margin:22px 0px; padding-left: 18px; background-size : 13px 13px; }
+.tree_table .end_state .door_state  { transform: scale(1.25); background: url("../../img/info_door.svg") no-repeat 0px center; margin:22px 0px; padding-left: 18px; background-size : 13px 13px; }
 .page_objects #object-release { position: absolute; bottom: 2px; left: 0px; }
 .page_objects #object-back { position: absolute; bottom: 2px; right: 0px; }
 .page_objects #object-detail-back {float: right; bottom: 20px; right: 15px; }
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#mil_24 {
+    animation: blink 1s infinite;
+}
 
 .cmdcheckbox { display: none; }
 .cmdswitch { width: 36px; height: 15px; background: #ccc; border-radius: 8px; padding: 1px; box-sizing: border-box; display: inline-block; margin-top: 2px; cursor: pointer; }
@@ -287,7 +313,7 @@ ul.tabbar li.tab_active a { background-color: #5BC872; color: #000; border: 1px 
 /*#################################################*/
 .page_history { position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; z-index: 1; }
 .page_history table{ width:100%; table-layout:fixed; }
-.page_history .page-title { box-sizing: border-box; margin-bottom: 15px; font-size: 18px; line-height: 50px; padding: 0 50px; height: 50px; display: table; width: 100%; color: #ffffff; background-color: #2b82d4; }
+.page_history .page-title { box-sizing: border-box; margin-bottom: 15px; font-size: 18px; line-height: 50px; padding: 0 50px; height: 50px; display: table; width: 100%; color: #ffffff; background-color: #666d80; }
 .page_history  .title-block i { position: absolute; top: 11px; left: 15px; width: 25px; height: 25px;  background: transparent url("../mimg/page.svg") no-repeat 0 center; cursor: pointer; }
 .page_history .ilabel {width:90%; display:block; margin: 5px 10px; height: 29px; font-size: 15px; line-height: 25px; color: #44484D; }
 .page_history .itext { width:90%; display:block; margin: 5px 10px; height: 29px; font-size: 13px; line-height: 25px; font-weight: normal; border-bottom: 1px solid #DDDDDD; }
@@ -309,11 +335,11 @@ ul.tabbar li.tab_active a { background-color: #5BC872; color: #000; border: 1px 
 .page_cmd .page-title { box-sizing: border-box; margin-bottom: 15px; font-size: 18px; line-height: 50px; padding: 0 50px; height: 50px; display: table; width: 100%; color: #ffffff; background-color: #2b82d4; }
 .page_cmd .title-block i { position: absolute; top: 11px; left: 15px; width: 25px; height: 25px;  background: transparent url("../mimg/page.svg") no-repeat 0 center; cursor: pointer; }
 .page_cmd .ilabel {width:90%; display:block; margin: 5px 10px; height: 29px; font-size: 15px; line-height: 25px; color: #44484D; }
-.page_cmd .itext { width:90%; display:block; margin: 5px 10px; height: 29px; font-size: 13px; line-height: 25px; font-weight: normal; border-bottom: 1px solid #DDDDDD; }
+.page_cmd .itext { width:90%; display:block; margin: 5px 10px; height: 29px; font-size: 13px; line-height: 25px; font-weight: normal; border-bottom: 1px solid #DDDDDD;padding:0px 5px }
 .page_cmd .iselect { width:90%; display:block; margin: 5px 10px; height: 33px; font-size: 13px; line-height: 28px; font-weight: normal; border-bottom: 1px solid #DDDDDD; }
 .page_cmd .itime { width:90%; display:block; margin: 5px 10px; height: 29px; font-size: 13px; line-height: 25px; font-weight: normal; border-bottom: 1px solid #DDDDDD; }
 .page_cmd .iul{ background: #fff; border: 1px solid #ccc; font-size: 16px; margin-left: 10px; margin-right: 5px; padding: 2px; height: 300px; overflow-y: auto !important; text-overflow: ellipsis; }
-.page_cmd .iul li a { padding-left: 20px; font-size: 16px; background: #fff url("../../img/cmditem.svg") no-repeat 3px center; background-size : 12px 12px; }
+.page_cmd .iul li a { padding-left: 20px; font-size: 14px; background: #fff url("../../img/cmditem.svg") no-repeat 3px center; background-size : 12px 12px; }
 .page_cmd .iul li.cmd_active a { padding-left: 20px; font-weight: bold; text-decoration: none; background: #DDDDDD url("../../img/sendcmd.svg") no-repeat 3px center; background-size : 12px 12px; }
 /*.page_cmd .iul li:nth-of-type(odd){ background: #fff;}
 .page_cmd .iul li:nth-of-type(even){ background: #DDDDDD;}奇偶行颜色*/
@@ -332,7 +358,8 @@ ul.tabbar li.tab_active a { background-color: #5BC872; color: #000; border: 1px 
 #events #event-table td { height: 30px; width: 50%; vertical-align: middle; text-align: left; padding-left: 10px;}
 .page_events #event-back { position: absolute; bottom: 18px; right: 0px; }
 .event-table-body{
-    background: #ccf2ff;
+    background: #d8d8d8;
+    margin:5px 0px;
 /*    border: 1px solid #DDEEEE;*/
 /*    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;*/
 }
@@ -344,7 +371,7 @@ ul.tabbar li.tab_active a { background-color: #5BC872; color: #000; border: 1px 
 /*#################################################*/
 .page_dashboard { position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; z-index: 1; }
 .page_dashboard table{ width:100%; table-layout:fixed; overflow-y:scroll; }
-.page_dashboard .page-title { box-sizing: border-box; margin-bottom: 15px; font-size: 18px; line-height: 50px; padding: 0 50px; height: 50px; display: table; width: 100%; color: #ffffff; background-color: #2b82d4; }
+.page_dashboard .page-title { box-sizing: border-box; margin-bottom: 15px; font-size: 18px; line-height: 50px; padding: 0 50px; height: 50px; display: table; width: 100%; color: #ffffff; background-color: #666d80; }
 .page_dashboard .title-block i { position: absolute; top: 11px; left: 15px; width: 25px; height: 25px;  background: transparent url("../mimg/page.svg") no-repeat 0 center; cursor: pointer; }
 #dashboard { position: absolute; left: 15px; right: 15px; top: 55px; bottom: 1px; }
 #dashboard-table-div { position: absolute; top: 5px; bottom: 60px; right: 0px; overflow-y:scroll; }

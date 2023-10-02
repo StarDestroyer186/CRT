@@ -1,6 +1,6 @@
 <?php
 $TEXT['global-title'] = "Plate-forme GPS";
-$TEXT['global-copyright'] = "Copyright &copy; www.7-24telematics.co. All Rights Reserved.";
+$TEXT['global-copyright'] = "Copyright &copy; www.credencetracker.com All Rights Reserved.";
 $TEXT['global-support'] = "Navigateur IE7+,Firefox,Maxthon,Chrome";
 $TEXT['1000'] = "Normal,pas d'alarme";
 $TEXT['1001'] = "Alerte Capot-ouvert/demontage/SOS";

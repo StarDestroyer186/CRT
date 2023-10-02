@@ -693,12 +693,12 @@ JS_DRAW_TOOL_TOOL_DISTANCE = "<?php echo $TEXT['js-draw-tool-distance']?>";
 				
 				<tr>
 					<td align="center">
-						<button type="button" class="icon-button" id="queryhis">
+						<button type="button" class="icon-button" id="queryhis" style="margin:10px 1px">
 						  <span></span><span><?php echo $TEXT['button-search'] ?></span>
 						</button>
 					</td>
 					<td align="center">
-						<button type="button" class="icon-button" id="history-back">
+						<button type="button" class="icon-button" id="history-back" style="margin:10px 1px">
 						  <span class="icon-button-back"></span><span><?php echo $TEXT['return-back'] ?></span>
 						</button>
 					</td>
@@ -757,7 +757,10 @@ JS_DRAW_TOOL_TOOL_DISTANCE = "<?php echo $TEXT['js-draw-tool-distance']?>";
 			<a href="#" onclick="showPage('page_menu');">
 				<i></i>
 			</a>
-			<div class="page-title"><?php echo $TEXT['menu-objects'] ?></div>			
+			<div class="page-title" style="display:flex; justify-content: space-between;">
+				<span><?php echo $TEXT['menu-objects'] ?></span>
+				<span class="icon-button-back" style="padding:5%;"></span>
+			</div>			
 		</div>
 		<div id="object_list">
 			<div id="sch" ontouchmove="event.preventDefault();">
@@ -776,9 +779,8 @@ JS_DRAW_TOOL_TOOL_DISTANCE = "<?php echo $TEXT['js-draw-tool-distance']?>";
 				</ul>
 				<div id="tablist" class="tablist">
 					<div id="tab_all" class="tab_content">
-						<div id="tree_all" class="tree_table" border="0" cellpadding="0" cellspacing="0" width="303">
-							<div></div>
-						</div>
+						<table id="tree_all" class="tree_table" border="0" cellpadding="0" cellspacing="0" width="303">
+						</table>
 					</div>
 					<div id="tab_online" class="tab_content">
 						<table id="tree_online" class="tree_table" border="0" cellpadding="0" cellspacing="0" width="303">
@@ -896,7 +898,7 @@ JS_DRAW_TOOL_TOOL_DISTANCE = "<?php echo $TEXT['js-draw-tool-distance']?>";
 			<a href="#" onclick="showPage('page_menu');">
 				<i></i>
 			</a>
-			<div class="page-title"><?php echo $TEXT['menu-dashboard'] ?></div>			
+				<div class="page-title"><?php echo $TEXT['menu-dashboard'] ?></div>
 		</div>
 		<div id="dashboard">
 			<div id="dashboard-table-div">

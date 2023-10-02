@@ -178,9 +178,9 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
         $tr = $("<tr class='a'></tr>").attr("g", gid).attr("t", gtxt).appendTo($tbody);
 		
         $KG = $tr;
-		$("<th style='display:flex; justify-items:between;'><span style='background-color: #fff ;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='showall'></span>").attr("title",JS_SHOW_ALL).appendTo($tr).find("input").prop('checked', show).css({opacity: show ? 1.0 : 0.5});
-		$("<span style='background-color: #fff;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='trackall'></span>").attr("title",JS_TRACK_ALL).appendTo($tr);
-        $g = $("<span style='word-wrap:break-word;word-break:break-all;'></span></th>").text(gtxt).attr("colspan", "8");
+		$("<th style='background-color: #fff ;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='showall'></input></th>").attr("title",JS_SHOW_ALL).appendTo($tr).find("input").prop('checked', show).css({opacity: show ? 1.0 : 0.5});
+		$("<th style='background-color: #fff;'><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox' class='trackall'></input></th>").attr("title",JS_TRACK_ALL).appendTo($tr);
+        $g = $("<th style='word-wrap:break-word;word-break:break-all;'></th>").text(gtxt).attr("colspan", "8");
         if(JS_DEFAULT_COLLAPSED == 0){
 			$g.addClass("group open").appendTo($tr);
 		}else{
@@ -208,9 +208,9 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
 				track = $keyitem.find("td:eq(1) input").is(':checked');
 			}			
 		}
-		$("<div><td><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox'></input></td>").attr("n", n).attr("title",JS_SHOW).appendTo($tr).find("input").prop('checked', show);
+		$("<td><input style='margin: 0px 4px; height: 16px; width: 16px;' type='checkbox'></input></td>").attr("n", n).attr("title",JS_SHOW).appendTo($tr).find("input").prop('checked', show);
 		$("<td><input style='margin: 0px 4px; height: 16px; width: 16px;;' type='checkbox'></input></td>").attr("n", n).attr("title",JS_TRACK).appendTo($tr).find("input").prop('checked', track);
-        $("<td style='word-wrap:break-word;word-break:break-all;'></td>").attr("c", c).attr("x", x).attr("y", y).attr("sp", s).attr("d", d).attr("i", i).attr("t", t).attr("dn", dn).attr("dt", dt).attr("io", io).attr("zt", zt).attr("ex", ex).html(c + "<br/>").appendTo($tr);
+        $("<td style='word-wrap:break-word;word-break:break-all;font-size:16px;'></td>").attr("c", c).attr("x", x).attr("y", y).attr("sp", s).attr("d", d).attr("i", i).attr("t", t).attr("dn", dn).attr("dt", dt).attr("io", io).attr("zt", zt).attr("ex", ex).html(c + "<br/>").appendTo($tr);
         $("<td></td>").text(p.tip).attr('tip',p.tip).appendTo($tr);
 		$("<td></td>").appendTo($tr);
 		$("<td></td>").attr("v", v).appendTo($tr);
@@ -251,24 +251,28 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
 		}
 		
 		//end state
-		// <span style='font-size:12px; color:#808080; white-space: wrap;'>"+t+"</span>
 		$tr = $("<tr class='end_state'></tr>").insertAfter($KI);
-		$("<td colspan='2'></td>").text('').appendTo($tr);
-		$td = $("<td colspan='8'></td>").appendTo($tr);
-		$ul = $("<ul style='list-style: none; display:grid; grid-template-columns:1fr 1fr;'></ul>").appendTo($td);
 		
+		$td = $("<td colspan='12'></td>").appendTo($tr);
+		$ul = $("<div style='list-style: none; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; justify-content: space-between;'></div>").appendTo($td);
+		$div_a = $("<div style='margin: auto;'></div>").appendTo($ul);
+		$div_b = $("<div style='margin: auto;'></div>").appendTo($ul);
+		$div_c = $("<div style='margin: auto;'></div>").appendTo($ul);
+
 		var stateLength = $(window).width() - 15 - 15 - 32 - 32;
-		$("<li style='width: "+stateLength*0.2+"px;' id='temp_1'></li>").appendTo($ul);
-		$("<li style='width: "+stateLength*0.2+"px;' id='fuel_1'></li>").appendTo($ul);
-		$("<li style='width: "+stateLength*0.2+"px; cursor:pointer;' id='mil_24'></li>").appendTo($ul); 
-		$("<li style='width: "+stateLength*0.2+"px;' id='max_speed_24'></li>").appendTo($ul);
-		$("<li style='width: "+stateLength*0.2+"px;' id='moving_time_24'></li>").appendTo($ul); 
-		$("<li style='width: "+stateLength*0.2+"px;' id='idle_time_24'></li>").appendTo($ul);
-		$("<li style='width: "+stateLength*0.2+"px;' id='stop_time_24'></li>").appendTo($ul);
-		$("<li style='width: "+stateLength*0.2+"px;' id='engine_time_24'></li>").appendTo($ul);
-		$("<li style='width: "+stateLength*0.2+"px;' id='total_mil'></li>").appendTo($ul);
-		$("<li style='width: "+stateLength*0.2+"px;' id='door_state'></li>").appendTo($ul);
-		$("<li style='width: "+stateLength*0.2+"px;' id='last_driver'></li>").appendTo($ul);
+		$("<div id='temp_1'></div>").appendTo($div_a);
+		$("<div id='fuel_1'></div>").appendTo($div_a);
+		$("<div id='mil_24' style='color:green; font-weight:bold;'></div>").appendTo($div_a); 
+		$("<div id='max_speed_24'></div>").appendTo($div_a);
+
+		$("<div id='moving_time_24'></div>").appendTo($div_b); 
+		$("<div id='idle_time_24'></div>").appendTo($div_b);
+		$("<div id='stop_time_24'></div>").appendTo($div_b);
+		$("<div id='engine_time_24'></div>").appendTo($div_b);
+
+		$("<div id='total_mil'></div>").appendTo($div_c);
+		$("<div id='door_state'></div>").appendTo($div_c);
+		$("<div id='last_driver'></div>").appendTo($div_c);
 
 		// $tr3 = $("<tr></tr>").insertAfter($tr);
 		// $("<td colspan='12'><span style='font-size:12px; color:#808080; white-space: wrap;'>"+t+"</span></td>").appendTo($tr3);
@@ -300,7 +304,7 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
 			$tr = $("<tr class='end_state'></tr>").insertAfter($KI);
 			$("<td></td>").text('').appendTo($tr);
 			$("<td></td>").text('').appendTo($tr);
-			$td = $("<td colspan=8></td>").appendTo($tr);
+			$td = $("<td colspan='12'></td>").appendTo($tr);
 			$("<ul style='list-style: none;'></ul>").appendTo($td);
 			
 			var stateLength = $(window).width() - 15 - 15 - 32 - 32;
@@ -499,14 +503,28 @@ function loadEventInfo(keyid, toastShow){
 				var json = eval('(' + data + ')');
 				$("#event-table").empty();
 				$("#event-table").animate({scrollTop:0},0);
-				for(var i=0; i<json.length; i++){
-					var jo = json[i];
-					var $tbody = $("<tbody></tbody>").appendTo($("#event-table"));
-					var $tr = $("<tr></tr>").appendTo($tbody);
-					var $td_time = $("<td></td>").text($.format.date(jo.t, JS_DEFAULT_DATETIME_fmt_JS)).appendTo($tr);
-					var $td_object = $("<td></td>").text(jo.c).appendTo($tr);
-					var $td_event = $("<td></td>").text(jo.a).appendTo($tr);
+				// Assuming json is an array of objects
+
+				// Select the parent container
+				const $eventTable = $("#event-table");
+
+				// Loop through the JSON data
+				for (const jo of json) {
+				  // Create a new row container
+				  const $row = $(`
+				    <div class='event-table-body'>
+				      <div style='display:flex;justify-content:space-between;padding:5px 15px;border-radius:5px;'>
+				        <div>${jo.c}</div>
+				        <div>${jo.a}</div>
+   				        <div>${$.format.date(jo.t, JS_DEFAULT_DATETIME_fmt_JS)}</div>
+				      </div>
+				    </div>
+				  `);
+
+				  // Append the row to the table
+				  $eventTable.append($row);
 				}
+
 			}else{
 				var json = eval('(' + data + ')');
 				for(var i=0; i<json.length; i++){
@@ -1586,6 +1604,7 @@ function showAllObj(isShow){
 	$.each($trs, function(idx, value){
 		if(isShow){			
 			$(value).find("td:first-child input").prop('checked', true);
+			
 		}else{
 			map.ClearTrack();
 			$(value).find("td:first-child input").prop('checked', false);
@@ -1596,7 +1615,7 @@ function showAllObj(isShow){
 
 function updateShow() {
     var $tabs = $(".tree_table");
-    var $ths = $tabs.find("tbody tr span.group");
+    var $ths = $tabs.find("tbody tr th.group");
 	
     $ths.unbind("click").click(function() {
         if ($(this).is(".open")) {

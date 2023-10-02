@@ -252,12 +252,6 @@ function addGroupItem(tid, selid, gid, gtxt, n, c, nc, si, x, y, i, d, t, ts, v,
 		
 		//end state
 		$tr = $("<tr class='end_state'></tr>").insertAfter($KI);
-<<<<<<< HEAD
-		// $("<td colspan='2'></td>").text('').appendTo($tr);
-		$td = $("<td colspan='8'></td>").appendTo($tr);
-		$ul = $("<ul style='list-style: none; display:grid; grid-template-columns:1fr 1fr;'></ul>").appendTo($td);
-=======
->>>>>>> 5acd728994a489e239c98df7b58c36a15a6b2616
 		
 		$td = $("<td colspan='12'></td>").appendTo($tr);
 		$ul = $("<div style='list-style: none; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; justify-content: space-between;'></div>").appendTo($td);
